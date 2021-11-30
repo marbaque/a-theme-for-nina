@@ -5,7 +5,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package Nina
+ * @package White Nina
  */
 
 if (!defined('_S_VERSION')) {
@@ -26,7 +26,7 @@ if (!function_exists('nina_setup')) :
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
-		 * If you're building a theme based on Nina, use a find and replace
+		 * If you're building a theme based on White Nina, use a find and replace
 		 * to change 'nina' to the name of your theme in all the template files.
 		 */
 		load_theme_textdomain('nina', get_template_directory() . '/languages');
@@ -237,8 +237,6 @@ function nina_scripts()
 		'expand' => __( 'Expand child menu', 'nina'),
 		'collapse' => __( 'Collapse child menu', 'nina'),
 	));
-
-	//wp_enqueue_script( 'nina-fa', 'https://kit.fontawesome.com/73b52a0b5c.js', true );
 	
 	if (is_singular() && comments_open() && get_option('thread_comments')) {
 		wp_enqueue_script('comment-reply');

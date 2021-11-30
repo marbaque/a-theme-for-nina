@@ -1,7 +1,7 @@
 Nina
 ===
 
-Hi. I'm a simple and beautiful theme called Nina. I'm a theme meant for blogging and personal sites. Try turning me into the next, most awesome, WordPress site out there. That's what I'm here for.
+Hi. I'm a simple and beautiful theme called White Nina. I'm a theme meant for blogging and personal sites. Try me into the next, most awesome, WordPress site out there. That's what I'm here for.
 
 My ultra-minimal CSS might make me look like theme tartare but that means less stuff to get in your way when you're creating your awesome site. Here are some of the other more interesting things you'll find here:
 
