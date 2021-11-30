@@ -2,9 +2,9 @@
 msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
-"Project-Id-Version: Nina\n"
-"POT-Creation-Date: 2021-11-29 21:38-0600\n"
-"PO-Revision-Date: 2021-11-29 21:38-0600\n"
+"Project-Id-Version: White Nina\n"
+"POT-Creation-Date: 2021-11-29 22:12-0600\n"
+"PO-Revision-Date: 2021-11-29 22:12-0600\n"
 "Last-Translator: Mario Badilla <mario.badilla@gmail.com>\n"
 "Language-Team: Mario Badilla <mario.badilla@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -217,11 +217,11 @@ msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr ""
 
 #. Theme Name of the plugin/theme
-msgid "Nina"
+msgid "White Nina"
 msgstr ""
 
 #. Theme URI of the plugin/theme
-msgid "https://github.com/marbaque/a-theme-for-nina"
+msgid "https://github.com/marbaque/white-nina"
 msgstr ""
 
 #. Description of the plugin/theme

@@ -28,7 +28,7 @@ best reading experience.
 
 = Does this theme support any plugins? =
 
-Nina includes support for WooCommerce and for Infinite Scroll in Jetpack.
+White Nina includes support for WooCommerce and for Infinite Scroll in Jetpack.
 
 == Changelog ==
 

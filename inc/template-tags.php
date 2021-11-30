@@ -27,7 +27,7 @@ if ( ! function_exists( 'nina_posted_on' ) ) :
 
 		$posted_on = sprintf(
 			/* translators: %s: post date. */
-			esc_html_x( '%s', 'post date', 'nina' ),
+			esc_html_x( '%s', 'post date', 'white-nina' ),
 			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 		);
 
@@ -43,7 +43,7 @@ if ( ! function_exists( 'nina_posted_by' ) ) :
 	function nina_posted_by() {
 		$byline = sprintf(
 			/* translators: %s: post author. */
-			esc_html_x( 'by %s', 'post author', 'nina' ),
+			esc_html_x( 'by %s', 'post author', 'white-nina' ),
 			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 		);
 
@@ -60,17 +60,17 @@ if ( ! function_exists( 'nina_entry_footer' ) ) :
 		// Hide category and tag text for pages.
 		if ( 'post' === get_post_type() ) {
 			/* translators: used between list items, there is a space after the comma */
-			$categories_list = get_the_category_list( esc_html__( ', ', 'nina' ) );
+			$categories_list = get_the_category_list( esc_html__( ', ', 'white-nina' ) );
 			if ( $categories_list ) {
 				/* translators: 1: list of categories. */
-				printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'nina' ) . '</span>', $categories_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+				printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'white-nina' ) . '</span>', $categories_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 			}
 
 			/* translators: used between list items, there is a space after the comma */
-			$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'nina' ) );
+			$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'white-nina' ) );
 			if ( $tags_list ) {
 				/* translators: 1: list of tags. */
-				printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'nina' ) . '</span>', $tags_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+				printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'white-nina' ) . '</span>', $tags_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 			}
 		}
 
@@ -80,7 +80,7 @@ if ( ! function_exists( 'nina_entry_footer' ) ) :
 				sprintf(
 					wp_kses(
 						/* translators: %s: post title */
-						__( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'nina' ),
+						__( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'white-nina' ),
 						array(
 							'span' => array(
 								'class' => array(),
@@ -97,7 +97,7 @@ if ( ! function_exists( 'nina_entry_footer' ) ) :
 			sprintf(
 				wp_kses(
 					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Edit <span class="screen-reader-text">%s</span>', 'nina' ),
+					__( 'Edit <span class="screen-reader-text">%s</span>', 'white-nina' ),
 					array(
 						'span' => array(
 							'class' => array(),
@@ -128,7 +128,7 @@ if ( ! function_exists( 'nina_post_thumbnail' ) ) :
 			?>
 
 			<div class="post-thumbnail top">
-				<?php the_post_thumbnail( 'nina-wide', ['class'=> 'top'] ); ?>
+				<?php the_post_thumbnail( 'white-nina-wide', ['class'=> 'top'] ); ?>
 			</div><!-- .post-thumbnail -->
 
 		<?php else : ?>

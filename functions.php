@@ -27,9 +27,9 @@ if (!function_exists('nina_setup')) :
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
 		 * If you're building a theme based on White Nina, use a find and replace
-		 * to change 'nina' to the name of your theme in all the template files.
+		 * to change 'white-nina' to the name of your theme in all the template files.
 		 */
-		load_theme_textdomain('nina', get_template_directory() . '/languages');
+		load_theme_textdomain('white-nina', get_template_directory() . '/languages');
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support('automatic-feed-links');
@@ -48,12 +48,12 @@ if (!function_exists('nina_setup')) :
 		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		 */
 		add_theme_support('post-thumbnails');
-		add_image_size('nina-wide', 2000, 1200, true);
+		add_image_size('white-nina-wide', 2000, 1200, true);
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
 			array(
-				'menu-1' => esc_html__('Menu', 'nina'),
+				'menu-1' => esc_html__('Menu', 'white-nina'),
 			)
 		);
 
@@ -110,6 +110,8 @@ if (!function_exists('nina_setup')) :
 
 		// Add support for experimental link color control.
 		add_theme_support('experimental-link-color');
+
+		add_theme_support( 'html5' );
 	}
 endif;
 add_action('after_setup_theme', 'nina_setup');
@@ -136,9 +138,9 @@ function nina_widgets_init()
 {
 	register_sidebar(
 		array(
-			'name'          => esc_html__('Sidebar', 'nina'),
+			'name'          => esc_html__('Sidebar', 'white-nina'),
 			'id'            => 'sidebar-1',
-			'description'   => esc_html__('Add widgets here.', 'nina'),
+			'description'   => esc_html__('Add widgets here.', 'white-nina'),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',
@@ -147,9 +149,9 @@ function nina_widgets_init()
 	);
 	register_sidebar(
 		array(
-			'name'          => esc_html__('Page Sidebar', 'nina'),
+			'name'          => esc_html__('Page Sidebar', 'white-nina'),
 			'id'            => 'sidebar-2',
-			'description'   => esc_html__('Add widgets here.', 'nina'),
+			'description'   => esc_html__('Add widgets here.', 'white-nina'),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',
@@ -171,8 +173,8 @@ function nina_fonts_url()
 	 * supported by Karla and Roboto+Slab, translate this to 'off'. Do not translate
 	 * into your own language.
 	 */
-	$sansSerif = _x('on', 'Karla font: on or off', 'nina');
-	$slab = _x('on', 'Roboto+Slab: on or off', 'nina');
+	$sansSerif = _x('on', 'Karla font: on or off', 'white-nina');
+	$slab = _x('on', 'Roboto+Slab: on or off', 'white-nina');
 
 	$font_families = array();
 
@@ -209,7 +211,7 @@ function nina_fonts_url()
  */
 function nina_resource_hints($urls, $relation_type)
 {
-	if (wp_style_is('nina-fonts', 'queue') && 'preconnect' === $relation_type) {
+	if (wp_style_is('white-nina-fonts', 'queue') && 'preconnect' === $relation_type) {
 		$urls[] = array(
 			'href' => 'https://fonts.gstatic.com',
 			'crossorigin',
@@ -226,16 +228,16 @@ add_filter('wp_resource_hints', 'nina_resource_hints', 10, 2);
 function nina_scripts()
 {
 	// Enqueue Google Fonts: Karla y Roboto-Slab Serif Pro
-	wp_enqueue_style('nina-fonts', nina_fonts_url());
+	wp_enqueue_style('white-nina-fonts', nina_fonts_url());
 	
-	wp_enqueue_style('nina-style', get_stylesheet_uri(), array(), _S_VERSION);
-	wp_style_add_data('nina-style', 'rtl', 'replace');
+	wp_enqueue_style('white-nina-style', get_stylesheet_uri(), array(), _S_VERSION);
+	wp_style_add_data('white-nina-style', 'rtl', 'replace');
 
-	wp_enqueue_script('nina-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true);
+	wp_enqueue_script('white-nina-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true);
 	
-	wp_localize_script( 'nina-navigation', 'ninaScreenReaderText', array(
-		'expand' => __( 'Expand child menu', 'nina'),
-		'collapse' => __( 'Collapse child menu', 'nina'),
+	wp_localize_script( 'white-nina-navigation', 'ninaScreenReaderText', array(
+		'expand' => __( 'Expand child menu', 'white-nina'),
+		'collapse' => __( 'Collapse child menu', 'white-nina'),
 	));
 	
 	if (is_singular() && comments_open() && get_option('thread_comments')) {

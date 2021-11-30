@@ -23,7 +23,7 @@
 		</div>				
 	<?php else : ?>
 		<figure class="top">
-		<?php the_post_thumbnail('nina-wide'); ?>
+		<?php the_post_thumbnail('white-nina-wide'); ?>
 		<figcaption><?php echo get_the_post_thumbnail_caption(); ?></figcaption>
 		</figure><!-- .featured-image full-bleed -->
 	<?php endif; ?>
@@ -55,7 +55,7 @@
 			sprintf(
 				wp_kses(
 					/* translators: %s: Name of current post. Only visible to screen readers */
-					__('Continue reading<span class="screen-reader-text"> "%s"</span>', 'nina'),
+					__('Continue reading<span class="screen-reader-text"> "%s"</span>', 'white-nina'),
 					array(
 						'span' => array(
 							'class' => array(),
@@ -67,7 +67,7 @@
 		);
 		wp_link_pages(
 			array(
-				'before' => '<div class="page-links">' . esc_html__('Pages:', 'nina'),
+				'before' => '<div class="page-links">' . esc_html__('Pages:', 'white-nina'),
 				'after'  => '</div>',
 			)
 		);

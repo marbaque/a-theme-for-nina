@@ -25,7 +25,7 @@
 <body <?php body_class(); ?>>
 	<?php wp_body_open(); ?>
 	<div id="page" class="site">
-		<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e('Skip to content', 'nina'); ?></a>
+		<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e('Skip to content', 'white-nina'); ?></a>
 
 		<header id="masthead" class="site-header">
 			<div class="site-branding">
@@ -56,7 +56,7 @@
 
 			<nav id="site-navigation" class="main-navigation">
 				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
-					<span class="screen-reader-text"><?php esc_html_e('Primary Menu', 'nina'); ?></span>
+					<span class="screen-reader-text"><?php esc_html_e('Primary Menu', 'white-nina'); ?></span>
 				</button>
 				<?php
 				wp_nav_menu(
