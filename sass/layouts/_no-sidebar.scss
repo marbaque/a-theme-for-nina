@@ -1,0 +1,19 @@
+.no-sidebar,
+.error404 {
+
+	.site {
+		display: grid;
+		grid-template-columns: auto;
+		grid-template-areas:
+			"header"
+			"main"
+			"footer";
+	}
+	.site-main {
+		width: 100%;
+		@media screen and(min-width:$query__lg) {
+			max-width: 64rem;
+		}
+	}
+	
+}

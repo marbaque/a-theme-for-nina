@@ -1,0 +1,41 @@
+.site {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 20px;
+  row-gap: 20px;
+  max-width: $size__site-max;
+  margin: 0 auto;
+  grid-template-areas:
+    "header header header header"
+    "main main main main"
+    "sidebar sidebar sidebar sidebar"
+    "footer footer footer footer";
+
+  @media screen and (min-width: $query__md) {
+    grid-template-areas:
+      "header header header header"
+      "sidebar main main main"
+      "footer footer footer footer";
+  }
+}
+
+.site-header {
+  grid-area: header;
+}
+
+.site-main {
+  grid-area: main;
+  overflow: hidden; /* Resolves issue with <pre> elements forcing full width. */
+  justify-self: start;
+  order: 1;
+}
+
+.widget-area {
+  grid-area: sidebar;
+}
+
+.site-footer {
+  grid-area: footer;
+}
+
+@import "no-sidebar";

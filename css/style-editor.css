@@ -1,0 +1,304 @@
+/*--------------------------------------------------------------
+# Base
+--------------------------------------------------------------*/
+/* Typography
+--------------------------------------------- */
+.editor-styles-wrapper {
+  background: #fff;
+  color: #404040;
+  -moz-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+}
+.editor-styles-wrapper > * {
+  color: #404040;
+  font-family: "Karla", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  word-break: break-all;
+  word-break: break-word;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+.block-editor-default-block-appender
+  textarea.block-editor-default-block-appender__content {
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.wp-block {
+  max-width: 960px;
+}
+
+.editor-styles-wrapper p,
+.editor-styles-wrapper ol,
+.editor-styles-wrapper ul,
+.editor-styles-wrapper dl,
+.editor-styles-wrapper dt {
+  font-family: "Karla", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  letter-spacing: normal;
+}
+
+.editor-post-title__block .editor-post-title__input,
+.editor-styles-wrapper .wp-block h1,
+.editor-styles-wrapper .wp-block h2,
+.editor-styles-wrapper .wp-block h3,
+.editor-styles-wrapper .wp-block h4,
+.editor-styles-wrapper .wp-block h5,
+.editor-styles-wrapper .wp-block h6,
+.editor-styles-wrapper .has-drop-cap:not(:focus)::first-letter,
+.editor-styles-wrapper cite,
+.editor-styles-wrapper figcaption,
+.editor-styles-wrapper .wp-caption-text {
+	font-family: "Karla", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+.editor-styles-wrapper .wp-block h1,
+.editor-styles-wrapper .wp-block h2,
+.editor-styles-wrapper .wp-block h3,
+.editor-styles-wrapper .wp-block h4,
+.editor-styles-wrapper .wp-block h5,
+.editor-styles-wrapper .wp-block h6 {
+  margin-top: 0.75em;
+  margin-bottom: 0.25em;
+  font-family: "Karla", sans-serif;
+  clear: both;
+  text-rendering: optimizeLegibility;
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+.editor-styles-wrapper .wp-block h1,
+.editor-post-title {
+  font-size: 1em;
+  font-family: "Karla", sans-serif;
+}
+
+.editor-styles-wrapper .wp-block h2 {
+  font-size: 1.8em;
+}
+
+@media screen and (min-width: 700px) {
+    .editor-styles-wrapper .wp-block h1 {
+    font-size: 3em;
+  }
+
+  .editor-styles-wrapper .wp-block h2 {
+    font-size: 2.6em;
+  }
+}
+.editor-styles-wrapper .wp-block h3 {
+  font-size: 2.2em;
+}
+
+.editor-styles-wrapper .wp-block h4 {
+  font-size: 2em;
+}
+
+.editor-styles-wrapper .wp-block h5 {
+  font-size: 1.8em;
+}
+
+.editor-styles-wrapper .wp-block h6 {
+  font-size: 1.6em;
+}
+
+.editor-styles-wrapper .wp-block p {
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+}
+
+.editor-styles-wrapper .wp-block dfn,
+.editor-styles-wrapper .wp-block cite,
+.editor-styles-wrapper .wp-block em,
+i {
+  font-style: italic;
+}
+
+blockquote {
+  margin: 0 1.5em;
+}
+
+address {
+  margin: 0 0 1.5em;
+}
+
+.editor-styles-wrapper .wp-block pre {
+  background: #f4f4f4;
+  font-family: "Courier 10 Pitch", courier, monospace;
+  line-height: 1.6;
+  margin-bottom: 1.6em;
+  max-width: 100%;
+  overflow: auto;
+  padding: 1.6em;
+}
+
+big {
+  font-size: 125%;
+}
+
+
+.editor-styles-wrapper .has-drop-cap {
+  padding-top: 1rem;
+}
+.editor-styles-wrapper .has-drop-cap:not(:focus)::first-letter {
+  float: left;
+  font-size: 4em !important;
+  line-height: 1;
+  padding-top: 1rem;
+  padding-left: 0.5rem;
+  margin-right: 1rem;
+  font-family: "Roboto Slab", serif;
+  border-top: 2px solid #404040;
+  border-left: 2px solid #404040;
+}
+
+/*--------------------------------------
+**
+** Blocks
+** 
+---------------------------------------*/
+/* Images */
+.wp-block-image img {
+  border: 2px solid #404040;
+}
+
+/* buttons */
+.wp-block-button:hover a.wp-block-button__link {
+  transform: translate(0, -8px);
+  transition: transform 125ms;
+}
+.wp-block-button a.wp-block-button__link {
+  border: none;
+  line-height: 1.2;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 1px;
+  font-size: 0.9em;
+  transition: transform 500ms;
+  will-change: transform;
+}
+.wp-block-button.is-style-outline a.wp-block-button__link {
+  background: none;
+  border: 4px solid currentColor;
+}
+.wp-block-button.is-style-squared a.wp-block-button__link {
+  border-radius: 2px;
+}
+
+/* cover */
+.wp-block-cover p.wp-block-cover-text a {
+  color: inherit;
+}
+
+/* Gallery */
+.wp-block-gallery figure img {
+  border: 2px solid #404040;
+}
+.wp-block-gallery figure > a {
+  border: none;
+}
+.wp-block-gallery figure .blocks-gallery-item__caption {
+  font-size: 0.7em;
+  line-height: 1.2;
+}
+.wp-block-gallery figure .blocks-gallery-item__caption a {
+  color: inherit;
+  border-width: 1px;
+}
+
+.wp-block-media-text .wp-block-media-text__content .has-large-font-size {
+  font-family: "Roboto Slab", serif !important;
+}
+
+.wp-block-quote {
+  background: #f4f4f4;
+  padding: 1em;
+}
+.wp-block-quote p {
+  font-family: "Roboto Slab", serif;
+}
+.wp-block-quote.is-style-large {
+  padding: 2em 1em;
+}
+@media screen and (min-width: 780px) {
+  .wp-block-quote.is-style-large {
+    padding: 2em;
+  }
+}
+
+.wp-block-pullquote:not(.is-style-solid-color) {
+  border-color: #404040;
+}
+.wp-block-pullquote blockquote p {
+  font-family: "Roboto Slab", serif;
+}
+
+.wp-block-file {
+  background: #f4f4f4;
+  padding: 1em;
+}
+.wp-block-file a {
+  border: none;
+  font-weight: 400;
+}
+.wp-block-file a:before {
+  font-family: "Font Awesome";
+  content: "";
+  margin-right: 0.25em;
+}
+.wp-block-file a[href*=".pdf"]:before {
+  content: "";
+}
+.wp-block-file a[href*=".doc"]:before {
+  content: "";
+}
+.wp-block-file a[href*=".xls"]:before,
+.wp-block-file a[href*=".xlsx"]:before {
+  content: "";
+}
+.wp-block-file a[href*=".ppt"]:before,
+.wp-block-file a[href*=".pptx"]:before {
+  content: "";
+}
+.wp-block-file a[href*=".csv"]:before {
+  content: "";
+}
+.wp-block-file a[href*=".jpg"]:before,
+.wp-block-file a[href*=".png"]:before,
+.wp-block-file a[href*=".gif"]:before,
+.wp-block-file a[href*=".jpeg"]:before {
+  content: "";
+}
+.wp-block-file a.wp-block-file__button:before {
+  content: "";
+}
+
+.wp-block-embed {
+  max-width: 100%;
+}
+
+* Captions --------------------------------------------- */ .wp-caption {
+  margin-bottom: 1.5em;
+  max-width: 100%;
+}
+.wp-caption img[class*="wp-image-"] {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.wp-caption .wp-caption-text {
+  margin: 0.8075em 0;
+}
+
+.wp-caption-text {
+  text-align: center;
+}

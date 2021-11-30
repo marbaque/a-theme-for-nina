@@ -1,0 +1,68 @@
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+  max-width: 100%;
+}
+
+img {
+  height: auto; // Make sure images are scaled correctly.
+  max-width: 100%; // Adhere to container width.
+}
+
+figure {
+  margin: 1em 0; // Extra wide images within figure tags don't overflow the content area.
+}
+
+// Featured image and caption
+.site-main {
+  .top {
+    width: auto;
+    height: auto;
+    position: relative;
+    margin: 2rem 0 3rem;
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      max-height: 480px;
+      overflow: hidden;
+    }
+
+    figcaption {
+      font-size: 0.75em;
+      font-style: italic;
+      text-align: right;
+      color: siver;
+      overflow: auto;
+      padding: 0 20px;
+
+      a {
+        border: none;
+      }
+    }
+  }
+  .caption {
+    font-size: 60%;
+    color: siver;
+  }
+}
+
+//  Featured image when no sidebar present
+.no-sidebar {
+  .site-main {
+    overflow: visible;
+  }
+  .top {
+    width: 100vw;
+	margin-left: -20px;
+	margin-right: -20px;
+
+    @media screen and (min-width: $query__lg) {
+      margin-left: -10rem;
+      margin-right: -10rem;
+      overflow: visible;
+	  width: auto;
+    }
+  }
+}

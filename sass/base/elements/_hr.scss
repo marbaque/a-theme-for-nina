@@ -1,0 +1,6 @@
+hr {
+	margin: 30px 0;
+	@extend .stroke-black;
+	border-width: 3px;
+	border-style: solid;
+  }

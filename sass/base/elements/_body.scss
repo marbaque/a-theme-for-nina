@@ -1,0 +1,47 @@
+body {
+	background: $color__background-body; // Fallback for when there is no custom background color defined.
+}
+
+// .wrapper {
+//     width: 100vw;
+//     margin: 0 auto;
+// }
+
+.page,
+.single {
+
+    .migajas {
+        font-size: .7em;
+    }
+
+	.widget-area {
+
+	}
+}
+
+.site-main {
+    margin: 0 auto;
+	padding: 40px 20px 80px;
+}
+.widget-area {
+    padding: 40px 0 80px;
+}
+
+// footer
+.site-footer {
+    font-size: 80%;
+    padding: 40px 20px;
+    text-align: center;
+    border-top: 1px solid silver;
+
+    .licencia {
+        margin-top: 40px;
+        font-size: 80%;
+        color: silver;
+        a {
+            border-width: 0;
+            color: currentColor;
+
+        }
+    }
+}

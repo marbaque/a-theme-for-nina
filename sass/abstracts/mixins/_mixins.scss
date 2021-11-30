@@ -1,0 +1,45 @@
+// Center block
+@mixin center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Column width with margin
+@mixin column-width($numberColumns: 3) {
+  width: map-get($columns, $numberColumns) -
+    (($columns__margin * ($numberColumns - 1)) / $numberColumns);
+}
+
+@mixin word-wrap {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  word-break: break-all;
+  word-break: break-word;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+@mixin ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+// Source: https://dev.to/stordahl_/examples-of-sass-scss-mixins-ce
+@mixin fade($fade, $timing, $length, $count, $fill){ 
+  animation: $fade $timing $length;
+  animation-iteration-count: $count; 
+  animation-fill-mode: $fill; 
+} 
+@keyframes fadeIn { 
+  0% { opacity: 0; } 
+  100% { opacity: 1; } 
+} 
+@keyframes fadeOut { 
+  0% { opacity: 1; } 
+  100% { opacity: 0; } 
+}

@@ -1,0 +1,153 @@
+.widget {
+	margin: 0 0 1.5em;
+
+	// Make sure select elements fit in widgets.
+	select {
+		max-width: 100%;
+	}
+}
+
+.widget-area {
+
+	ul,ol {
+		list-style-type: none;
+		padding: 0;
+		margin-left: 2rem;
+
+		li {
+			line-height: 1.5;
+		}
+
+		&.sub-menu,
+		&.children {
+			margin-left: 1em;
+		}
+
+		.sub-menu-toggle {
+			display: none;
+		}
+	}
+
+	a {
+		color: $color__link;
+		text-decoration: underline;
+		text-decoration-style: solid;
+		text-decoration-color: currentColor;
+		border: none;
+
+		&:link,
+		&:visited,
+		&:active {
+			color: $color__link;
+		}
+
+		&:hover {
+			color: $color__link-hover;
+			text-decoration-style: dotted;
+		}
+	}
+
+	.wp-block-social-links {
+
+		&.alignright {
+			margin-top: 20px;
+			justify-content: flex-end;
+		}
+
+		&.alignleft {
+			margin-top: 20px;
+		}
+	}
+
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+.widget {
+
+	background: $color__background-pre;
+	padding: 20px;
+	max-width: 100%;
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-weight: 700;
+		line-height: 1.2;
+	}
+
+	h1 {
+		font-size: 1.75em;
+	}
+
+	h2 {
+		font-size: 1.5em;
+	}
+
+	h3 {
+		font-size: 1.2em;
+	}
+
+	h4 {
+		font-size: 1.2em;
+	}
+
+	h5 {
+		font-size: 1.2em;
+	}
+
+	h6 {
+		font-size: 1.2em;
+	}
+}
+
+// Search widget styles
+.search-form {
+	display: flex;
+	flex-wrap: wrap;
+	margin: auto;
+	max-width: 100%;
+
+	> label {
+		width: 100%;
+		margin-bottom: 0;
+		font-weight: 400;
+	}
+
+	.search-field {
+		flex-grow: 1;
+		max-width: inherit;
+		margin-top: calc(20px / 3);
+		margin-right: calc(0.66 * 10px);
+	}
+
+	.search-submit {
+		margin-top: calc(20px / 3);
+		margin-left: 10px;
+	}
+}
+
+.widget_search > .search-form {
+
+	.search-field {
+		margin-right: calc(-1 * 3px);
+		-webkit-appearance: none;
+		margin-bottom: calc(0.5 * 20px);
+	}
+
+	.search-submit {
+		margin-left: 0;
+		margin-bottom: calc(0.5 * 20px);
+	}
+}
+
+.widget_rss a.rsswidget .rss-widget-icon {
+	display: none;
+}
+

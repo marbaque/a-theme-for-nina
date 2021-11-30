@@ -1,0 +1,88 @@
+.site-header {
+  width: 100%;
+  max-width: 100vw;
+  padding: 10px 20px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: top;
+  grid-gap: 10px;
+  // box-shadow: 0 1px 5px hsla(0,0,0,0.1);
+  z-index: 99;
+  height: 100px;
+
+  @media screen and (min-width: $query__md) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    justify-content: space-evenly;
+    grid-gap: 20px;
+    height: auto;
+  }
+
+  .site-branding {
+    grid-column: 1 / span 2;
+    display: flex;
+
+    @media screen and (min-width: $query__md) {
+      grid-column: 1 / span 1;
+    }
+
+    a {
+      text-decoration: none;
+      border: none;
+    }
+
+    .custom-logo-link {
+      display: block;
+      flex-shrink: 0;
+      margin-right: 10px;
+
+      img {
+        width: auto;
+        height: 60px;
+
+        @media screen and(min-width: $query__md) {
+          height: 80px;
+        }
+      }
+    }
+
+    .site-title {
+      font-size: 1.5rem;
+      width: 80%;
+      overflow: hidden;
+      max-width: 200px;
+      min-width: 160px;
+      height: auto;
+      border: none;
+      padding: 10px 0 0;
+      margin: 0;
+      background-color: rgb(255, 178, 62);
+      background: -webkit-linear-gradient(#39cccc, #0074d9);
+      background-size: 100%;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+
+      a {
+        color: $color__text-main;
+      }
+    }
+    p.site-description {
+      font-size: 0.8em;
+      margin: 0;
+      font-family: $font__serif;
+      @extend .navy;
+    }
+  }
+  .main-navigation {
+    grid-column: 4 / span 1;
+    font-size: 80%;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+
+    @media screen and (min-width: $query__md) {
+      display: block;
+      grid-column: 2 / span 2;
+    }
+  }
+}
