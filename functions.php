@@ -13,7 +13,7 @@ if (!defined('_S_VERSION')) {
 	define('_S_VERSION', '1.0.0');
 }
 
-if (!function_exists('nina_setup')) :
+if (!function_exists('white_nina_setup')) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
@@ -21,7 +21,7 @@ if (!function_exists('nina_setup')) :
 	 * runs before the init hook. The init hook is too late for some features, such
 	 * as indicating support for post thumbnails.
 	 */
-	function nina_setup()
+	function white_nina_setup()
 	{
 		/*
 		 * Make theme available for translation.
@@ -114,7 +114,7 @@ if (!function_exists('nina_setup')) :
 		add_theme_support( 'html5' );
 	}
 endif;
-add_action('after_setup_theme', 'nina_setup');
+add_action('after_setup_theme', 'white_nina_setup');
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -123,18 +123,18 @@ add_action('after_setup_theme', 'nina_setup');
  *
  * @global int $content_width
  */
-function nina_content_width()
+function white_nina_content_width()
 {
-	$GLOBALS['content_width'] = apply_filters('nina_content_width', 640);
+	$GLOBALS['content_width'] = apply_filters('white_nina_content_width', 640);
 }
-add_action('after_setup_theme', 'nina_content_width', 0);
+add_action('after_setup_theme', 'white_nina_content_width', 0);
 
 /**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function nina_widgets_init()
+function white_nina_widgets_init()
 {
 	register_sidebar(
 		array(
@@ -159,12 +159,12 @@ function nina_widgets_init()
 		)
 	);
 }
-add_action('widgets_init', 'nina_widgets_init');
+add_action('widgets_init', 'white_nina_widgets_init');
 
 /**
  * Register custom fonts.
  */
-function nina_fonts_url()
+function white_nina_fonts_url()
 {
 	$fonts_url = '';
 
@@ -209,7 +209,7 @@ function nina_fonts_url()
  * @param string $relation_type  The relation type the URLs are printed.
  * @return array $urls           URLs to print for resource hints.
  */
-function nina_resource_hints($urls, $relation_type)
+function white_nina_resource_hints($urls, $relation_type)
 {
 	if (wp_style_is('white-nina-fonts', 'queue') && 'preconnect' === $relation_type) {
 		$urls[] = array(
@@ -220,15 +220,15 @@ function nina_resource_hints($urls, $relation_type)
 
 	return $urls;
 }
-add_filter('wp_resource_hints', 'nina_resource_hints', 10, 2);
+add_filter('wp_resource_hints', 'white_nina_resource_hints', 10, 2);
 
 /**
  * Enqueue scripts and styles.
  */
-function nina_scripts()
+function white_nina_scripts()
 {
 	// Enqueue Google Fonts: Karla y Roboto-Slab Serif Pro
-	wp_enqueue_style('white-nina-fonts', nina_fonts_url());
+	wp_enqueue_style('white-nina-fonts', white_nina_fonts_url());
 	
 	wp_enqueue_style('white-nina-style', get_stylesheet_uri(), array(), _S_VERSION);
 	wp_style_add_data('white-nina-style', 'rtl', 'replace');
@@ -244,7 +244,26 @@ function nina_scripts()
 		wp_enqueue_script('comment-reply');
 	}
 }
-add_action('wp_enqueue_scripts', 'nina_scripts');
+add_action('wp_enqueue_scripts', 'white_nina_scripts');
+
+
+/**
+ * Fix skip link focus in IE11.
+ *
+ * This does not enqueue the script because it is tiny and because it is only for IE11,
+ * thus it does not warrant having an entire dedicated blocking script being loaded.
+ *
+ * @link https://git.io/vWdr2
+ */
+function white_nina_skip_link_focus_fix() {
+	// The following is minified via `terser --compress --mangle -- assets/js/skip-link-focus-fix.js`.
+	?>
+	<script>
+	/(trident|msie)/i.test(navigator.userAgent)&&document.getElementById&&window.addEventListener&&window.addEventListener("hashchange",function(){var t,e=location.hash.substring(1);/^[A-z0-9_-]+$/.test(e)&&(t=document.getElementById(e))&&(/^(?:a|select|input|button|textarea)$/i.test(t.tagName)||(t.tabIndex=-1),t.focus())},!1);
+	</script>
+	<?php
+}
+add_action( 'wp_print_footer_scripts', 'white_nina_skip_link_focus_fix' );
 
 /**
  * Implement the Custom Header feature.
@@ -272,3 +291,6 @@ require get_template_directory() . '/inc/customizer.php';
 if (defined('JETPACK__VERSION')) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+
+// Custom page walker.
+require get_template_directory() . '/inc/class-white-nina-walker-menu.php';

@@ -12,6 +12,10 @@ img {
 
 figure {
   margin: 1em 0; // Extra wide images within figure tags don't overflow the content area.
+
+  a {
+    border: none;
+  }
 }
 
 // Featured image and caption

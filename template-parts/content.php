@@ -36,7 +36,7 @@
 		<div class="item-content">
 			<div class="entry-meta">
 				<?php
-				nina_posted_on();
+				white_nina_posted_on();
 				?>
 			</div><!-- .entry-meta -->
 			<header class="entry-header">
@@ -75,7 +75,7 @@
 				?>
 			</div><!-- .entry-content -->
 			<footer class="entry-footer">
-				<?php nina_entry_footer(); ?>
+				<?php white_nina_entry_footer(); ?>
 			</footer><!-- .entry-footer -->
 
 		</div> <!-- .item-content -->

@@ -43,8 +43,8 @@
 		?>
 			<div class="entry-meta">
 				<?php
-				nina_posted_on();
-				nina_posted_by();
+				white_nina_posted_on();
+				white_nina_posted_by();
 				?>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
@@ -74,7 +74,7 @@
 		?>
 	</div><!-- .entry-content -->
 	<footer class="entry-footer">
-		<?php nina_entry_footer(); ?>
+		<?php white_nina_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 
 </div> <!-- .item-content -->

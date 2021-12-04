@@ -25,7 +25,7 @@
 			</div>				
 		<?php else : ?>
 			<figure class="top">
-			<?php the_post_thumbnail('nina-wide'); ?>
+			<?php the_post_thumbnail('white-nina-wide'); ?>
 			<figcaption><?php echo get_the_post_thumbnail_caption(); ?></figcaption>
 			</figure><!-- .featured-image full-bleed -->
 		<?php endif; ?>
@@ -45,8 +45,8 @@
 			?>
 				<div class="entry-meta">
 					<?php
-					nina_posted_on();
-					nina_posted_by();
+					white_nina_posted_on();
+					white_nina_posted_by();
 					?>
 				</div><!-- .entry-meta -->
 			<?php endif; ?>
@@ -76,7 +76,7 @@
 			?>
 		</div><!-- .entry-content -->
 		<footer class="entry-footer">
-			<?php nina_entry_footer(); ?>
+			<?php white_nina_entry_footer(); ?>
 		</footer><!-- .entry-footer -->
 
 	</div> <!-- .item-content -->
