@@ -171,10 +171,7 @@ to provide the best reading experience.
   color: #FFDC00;
 }
 
-.orange, .main-navigation .current_page_item > a,
-.main-navigation .current-menu-item > a,
-.main-navigation .current_page_ancestor > a,
-.main-navigation .current-menu-ancestor > a {
+.orange {
   color: #FF851B;
 }
 
@@ -1406,7 +1403,7 @@ button.dropdown-toggle {
     flex-direction: column;
     background-color: #f4f4f4;
     margin-left: 0;
-    background-color: rgba(36, 36, 36, 0.1);
+    background-color: rgba(128, 128, 128, 0.05);
     margin-bottom: 0;
     border-bottom: 2px solid #404040;
     margin-top: -2px;
