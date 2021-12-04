@@ -5,7 +5,7 @@ Theme URI: https://github.com/marbaque/white-nina
 Author: Mario Badilla
 Author URI: http://mariobadilla.com
 Description: A simple theme for great content
-Version: 1.1
+Version: 1.0.1
 Tested up to: 5.8
 Requires PHP: 5.6
 License: GNU General Public License v2 or later
@@ -435,12 +435,29 @@ to provide the best reading experience.
   font-weight: 400;
 }
 
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 @keyframes fadeIn {
   0% {
     opacity: 0;
   }
   100% {
     opacity: 1;
+  }
+}
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 @keyframes fadeOut {
@@ -530,7 +547,8 @@ a {
 abbr[title] {
   border-bottom: none;
   text-decoration: underline;
-  text-decoration: underline dotted;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
 }
 
 /**
@@ -800,7 +818,6 @@ textarea {
   word-break: break-all;
   word-break: break-word;
   -ms-hyphens: auto;
-  -moz-hyphens: auto;
   -webkit-hyphens: auto;
   hyphens: auto;
 }
@@ -1054,7 +1071,8 @@ figure a {
   margin: 2rem 0 3rem;
 }
 .site-main .top img {
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 100%;
   max-height: 480px;
   overflow: hidden;
@@ -1192,7 +1210,8 @@ textarea {
 .site {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  column-gap: 20px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
   row-gap: 20px;
   max-width: 1400px;
   margin: 0 auto;
@@ -1355,9 +1374,12 @@ button.dropdown-toggle {
 }
 
 .toggled-on ul.menu {
-  animation: fadeIn ease 0.5s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forward;
+  -webkit-animation: fadeIn ease 0.5s;
+          animation: fadeIn ease 0.5s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forward;
+          animation-fill-mode: forward;
 }
 .toggled-on .menu-toggle {
   color: #fff;
@@ -1372,9 +1394,12 @@ button.dropdown-toggle {
 .toggled-on ul,
 .sub-menu.toggled-on {
   display: block;
-  animation: fadeIn ease 0.5s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forward;
+  -webkit-animation: fadeIn ease 0.5s;
+          animation: fadeIn ease 0.5s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forward;
+          animation-fill-mode: forward;
 }
 
 @media screen and (min-width: 780px) {
@@ -1615,7 +1640,8 @@ h1.page-title {
 .search .index-item .item-media .index-img {
   width: 100%;
   max-height: 200px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .home .index-item .item-media a,
 .archive .index-item .item-media a,
@@ -1656,7 +1682,8 @@ h1.page-title {
     height: 100%;
     max-height: 100%;
     min-width: 100%;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     flex-grow: 1;
     position: absolute;
   }
@@ -2022,8 +2049,10 @@ h1.page-title {
 .widget-area a {
   color: #4169e1;
   text-decoration: underline;
-  text-decoration-style: solid;
-  text-decoration-color: currentColor;
+  -webkit-text-decoration-style: solid;
+          text-decoration-style: solid;
+  -webkit-text-decoration-color: currentColor;
+          text-decoration-color: currentColor;
   border: none;
 }
 .widget-area a:link, .widget-area a:visited, .widget-area a:active {
@@ -2031,7 +2060,8 @@ h1.page-title {
 }
 .widget-area a:hover {
   color: #191970;
-  text-decoration-style: dotted;
+  -webkit-text-decoration-style: dotted;
+          text-decoration-style: dotted;
 }
 .widget-area .wp-block-social-links.alignright {
   margin-top: 20px;
@@ -2326,7 +2356,8 @@ h1.page-title {
 .screen-reader-text {
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
-  clip-path: inset(50%);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
   height: 1px;
   margin: -1px;
   overflow: hidden;
@@ -2340,7 +2371,8 @@ h1.page-title {
   border-radius: 3px;
   box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
   clip: auto !important;
-  clip-path: none;
+  -webkit-clip-path: none;
+          clip-path: none;
   color: #21759b;
   display: block;
   font-size: 0.875rem;
@@ -2385,5 +2417,3 @@ h1.page-title {
   margin-right: auto;
   margin-bottom: 1.5em;
 }
-
-/*# sourceMappingURL=style.css.map */

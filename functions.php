@@ -8,9 +8,9 @@
  * @package White Nina
  */
 
-if (!defined('_S_VERSION')) {
+if (!defined('_WN_VERSION')) {
 	// Replace the version number of the theme on each release.
-	define('_S_VERSION', '1.0.0');
+	define('_WN_VERSION', '1.0.1');
 }
 
 if (!function_exists('white_nina_setup')) :
@@ -230,12 +230,12 @@ function white_nina_scripts()
 	// Enqueue Google Fonts: Karla y Roboto-Slab Serif Pro
 	wp_enqueue_style('white-nina-fonts', white_nina_fonts_url());
 	
-	wp_enqueue_style('white-nina-style', get_stylesheet_uri(), array(), _S_VERSION);
+	wp_enqueue_style('white-nina-style', get_stylesheet_uri(), array(), _WN_VERSION);
 	wp_style_add_data('white-nina-style', 'rtl', 'replace');
 
-	wp_enqueue_script('white-nina-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true);
+	wp_enqueue_script( 'white-nina-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), _WN_VERSION, true );
 	
-	wp_localize_script( 'white-nina-navigation', 'ninaScreenReaderText', array(
+	wp_localize_script( 'white-nina-navigation', 'whiteninaScreenReaderText', array(
 		'expand' => __( 'Expand child menu', 'white-nina'),
 		'collapse' => __( 'Collapse child menu', 'white-nina'),
 	));
