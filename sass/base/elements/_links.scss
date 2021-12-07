@@ -4,7 +4,7 @@ a {
   text-decoration: none;
   border-bottom: 0.15em solid cyan;
   @extend .border--aqua;
-  transition: all 0.2s;
+  transition: all 0.25s;
 
   &:focus {
     outline: 2px double $color__link;

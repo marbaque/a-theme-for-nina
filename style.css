@@ -1103,7 +1103,7 @@ a {
   font-weight: 700;
   text-decoration: none;
   border-bottom: 0.15em solid cyan;
-  transition: all 0.2s;
+  transition: all 0.25s;
 }
 a:focus {
   outline: 2px double #4169e1;
@@ -1463,9 +1463,17 @@ button.dropdown-toggle {
 .posts-navigation .nav-next,
 .post-navigation .nav-previous,
 .post-navigation .nav-next {
-  flex: 1 1 40%;
+  flex: 0 0 50%;
   display: flex;
   align-items: stretch;
+}
+.comment-navigation .nav-previous ::selection,
+.comment-navigation .nav-next ::selection,
+.posts-navigation .nav-previous ::selection,
+.posts-navigation .nav-next ::selection,
+.post-navigation .nav-previous ::selection,
+.post-navigation .nav-next ::selection {
+  background: none;
 }
 .comment-navigation .nav-previous a,
 .comment-navigation .nav-next a,
@@ -1479,6 +1487,7 @@ button.dropdown-toggle {
   color: #404040;
   padding: 0.5em;
   line-height: 1.2;
+  background-color: white;
 }
 .comment-navigation .nav-previous a:hover,
 .comment-navigation .nav-next a:hover,
@@ -1487,6 +1496,7 @@ button.dropdown-toggle {
 .post-navigation .nav-previous a:hover,
 .post-navigation .nav-next a:hover {
   background-color: #f4f4f4;
+  border-color: transparent;
 }
 @media screen and (min-width: 500px) {
   .comment-navigation .nav-previous a,

@@ -74,7 +74,7 @@
   // .current_page_ancestor > a,
   // .current-menu-ancestor > a {
   //   @extend .orange;
-  // } 
+  // }
 
   /*.menu-item-has-children,
   .page_item_has_children {
@@ -131,7 +131,6 @@ button.dropdown-toggle {
 }
 
 .toggled-on {
-
   ul.menu {
     @include fade(fadeIn, ease, 0.5s, 1, forward);
   }
@@ -170,7 +169,7 @@ button.dropdown-toggle {
         background-color: transparent;
         padding-top: 1em;
 
-        >li {
+        > li {
           margin: 0 0.25rem;
         }
       }
@@ -232,12 +231,11 @@ button.dropdown-toggle {
       // }
 
       /* If you want dropdowns to open on hover, uncomment this: */
-      
-			// li:hover > ul,
-			// 	li:focus > ul {
-			// 	display: block;
-			// }
-			
+
+      // li:hover > ul,
+      // 	li:focus > ul {
+      // 	display: block;
+      // }
     }
   }
   button.dropdown-toggle {
@@ -246,7 +244,6 @@ button.dropdown-toggle {
     top: 0.25rem;
   }
 }
-
 
 // Content navigation
 .comment-navigation,
@@ -265,9 +262,13 @@ button.dropdown-toggle {
 
   .nav-previous,
   .nav-next {
-    flex: 1 1 40%;
+    flex: 0 0 50%;
     display: flex;
     align-items: stretch;
+
+    ::selection {
+      background: none;
+    }
 
     a {
       width: 100%;
@@ -276,9 +277,11 @@ button.dropdown-toggle {
       color: $color__text-main;
       padding: 0.5em;
       line-height: 1.2;
+      background-color: white;
 
       &:hover {
         background-color: $color__background-pre;
+        border-color: transparent;
       }
     }
     @media screen and (min-width: $query__sm) {
