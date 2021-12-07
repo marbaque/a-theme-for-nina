@@ -25,7 +25,7 @@
 <body <?php body_class(); ?>>
 	<?php wp_body_open(); ?>
 	<div id="page" class="site">
-		<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e('Skip to content', 'white-nina'); ?></a>
+		<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e('Skip to content', 'whitenina'); ?></a>
 
 		<header id="masthead" class="site-header">
 			<div class="site-branding">
@@ -45,10 +45,10 @@
 						<p class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></p>
 					<?php
 					endif;
-					$white_nina_description = get_bloginfo('description', 'display');
-					if ($white_nina_description || is_customize_preview()) :
+					$whitenina_description = get_bloginfo('description', 'display');
+					if ($whitenina_description || is_customize_preview()) :
 					?>
-						<p class="site-description"><?php echo $white_nina_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped 
+						<p class="site-description"><?php echo $whitenina_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped 
 													?></p>
 					<?php endif; ?>
 				</div>
@@ -56,14 +56,14 @@
 
 			<nav id="site-navigation" class="main-navigation">
 				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
-					<span class="screen-reader-text"><?php esc_html_e('Menu', 'white-nina'); tags?></span>
+					<span class="screen-reader-text"><?php esc_html_e('Menu', 'whitenina'); tags?></span>
 				</button>
 				<?php
 				wp_nav_menu(
 					array(
 						'theme_location' => 'menu-1',
 						'menu_id'        => 'primary-menu',
-						'walker'   => new White_Nina_Walker_Menu(),
+						'walker'   => new Whitenina_Walker_Menu(),
 					)
 				);
 				?>

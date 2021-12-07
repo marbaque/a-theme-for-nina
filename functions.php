@@ -8,12 +8,12 @@
  * @package White Nina
  */
 
-if (!defined('_WN_VERSION')) {
+if (!defined('whitenina_version')) {
 	// Replace the version number of the theme on each release.
-	define('_WN_VERSION', '1.0.1');
+	define('whitenina_version', '1.0.2');
 }
 
-if (!function_exists('white_nina_setup')) :
+if (!function_exists('whitenina_setup')) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
@@ -21,15 +21,15 @@ if (!function_exists('white_nina_setup')) :
 	 * runs before the init hook. The init hook is too late for some features, such
 	 * as indicating support for post thumbnails.
 	 */
-	function white_nina_setup()
+	function whitenina_setup()
 	{
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
 		 * If you're building a theme based on White Nina, use a find and replace
-		 * to change 'white-nina' to the name of your theme in all the template files.
+		 * to change 'whitenina' to the name of your theme in all the template files.
 		 */
-		load_theme_textdomain('white-nina', get_template_directory() . '/languages');
+		load_theme_textdomain('whitenina', get_template_directory() . '/languages');
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support('automatic-feed-links');
@@ -48,12 +48,12 @@ if (!function_exists('white_nina_setup')) :
 		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		 */
 		add_theme_support('post-thumbnails');
-		add_image_size('white-nina-wide', 2000, 1200, true);
+		add_image_size('whitenina-wide', 2000, 1200, true);
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
 			array(
-				'menu-1' => esc_html__('Menu', 'white-nina'),
+				'menu-1' => esc_html__('Menu', 'whitenina'),
 			)
 		);
 
@@ -114,33 +114,33 @@ if (!function_exists('white_nina_setup')) :
 		add_theme_support( 'html5' );
 	}
 endif;
-add_action('after_setup_theme', 'white_nina_setup');
+add_action('after_setup_theme', 'whitenina_setup');
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *
  * Priority 0 to make it available to lower priority callbacks.
  *
- * @global int $content_width
+ * @global int $whitenina-content_width
  */
-function white_nina_content_width()
+function whitenina_content_width()
 {
-	$GLOBALS['content_width'] = apply_filters('white_nina_content_width', 640);
+	$GLOBALS['content_width'] = apply_filters('whitenina_content_width', 640);
 }
-add_action('after_setup_theme', 'white_nina_content_width', 0);
+add_action('after_setup_theme', 'whitenina_content_width', 0);
 
 /**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function white_nina_widgets_init()
+function whitenina_widgets_init()
 {
 	register_sidebar(
 		array(
-			'name'          => esc_html__('Sidebar', 'white-nina'),
+			'name'          => esc_html__('Sidebar', 'whitenina'),
 			'id'            => 'sidebar-1',
-			'description'   => esc_html__('Add widgets here.', 'white-nina'),
+			'description'   => esc_html__('Add widgets here.', 'whitenina'),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',
@@ -149,9 +149,9 @@ function white_nina_widgets_init()
 	);
 	register_sidebar(
 		array(
-			'name'          => esc_html__('Page Sidebar', 'white-nina'),
+			'name'          => esc_html__('Page Sidebar', 'whitenina'),
 			'id'            => 'sidebar-2',
-			'description'   => esc_html__('Add widgets here.', 'white-nina'),
+			'description'   => esc_html__('Add widgets here.', 'whitenina'),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',
@@ -159,12 +159,12 @@ function white_nina_widgets_init()
 		)
 	);
 }
-add_action('widgets_init', 'white_nina_widgets_init');
+add_action('widgets_init', 'whitenina_widgets_init');
 
 /**
  * Register custom fonts.
  */
-function white_nina_fonts_url()
+function whitenina_fonts_url()
 {
 	$fonts_url = '';
 
@@ -173,8 +173,8 @@ function white_nina_fonts_url()
 	 * supported by Karla and Roboto+Slab, translate this to 'off'. Do not translate
 	 * into your own language.
 	 */
-	$sansSerif = _x('on', 'Karla font: on or off', 'white-nina');
-	$slab = _x('on', 'Roboto+Slab: on or off', 'white-nina');
+	$sansSerif = _x('on', 'Karla font: on or off', 'whitenina');
+	$slab = _x('on', 'Roboto+Slab: on or off', 'whitenina');
 
 	$font_families = array();
 
@@ -209,9 +209,9 @@ function white_nina_fonts_url()
  * @param string $relation_type  The relation type the URLs are printed.
  * @return array $urls           URLs to print for resource hints.
  */
-function white_nina_resource_hints($urls, $relation_type)
+function whitenina_resource_hints($urls, $relation_type)
 {
-	if (wp_style_is('white-nina-fonts', 'queue') && 'preconnect' === $relation_type) {
+	if (wp_style_is('whitenina-fonts', 'queue') && 'preconnect' === $relation_type) {
 		$urls[] = array(
 			'href' => 'https://fonts.gstatic.com',
 			'crossorigin',
@@ -220,31 +220,31 @@ function white_nina_resource_hints($urls, $relation_type)
 
 	return $urls;
 }
-add_filter('wp_resource_hints', 'white_nina_resource_hints', 10, 2);
+add_filter('wp_resource_hints', 'whitenina_resource_hints', 10, 2);
 
 /**
  * Enqueue scripts and styles.
  */
-function white_nina_scripts()
+function whitenina_scripts()
 {
 	// Enqueue Google Fonts: Karla y Roboto-Slab Serif Pro
-	wp_enqueue_style('white-nina-fonts', white_nina_fonts_url());
+	wp_enqueue_style('whitenina-fonts', whitenina_fonts_url());
 	
-	wp_enqueue_style('white-nina-style', get_stylesheet_uri(), array(), _WN_VERSION);
-	wp_style_add_data('white-nina-style', 'rtl', 'replace');
+	wp_enqueue_style('whitenina-style', get_stylesheet_uri(), array(), whitenina_version);
+	wp_style_add_data('whitenina-style', 'rtl', 'replace');
 
-	wp_enqueue_script( 'white-nina-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), _WN_VERSION, true );
+	wp_enqueue_script( 'whitenina-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), whitenina_version, true );
 	
-	wp_localize_script( 'white-nina-navigation', 'whiteninaScreenReaderText', array(
-		'expand' => __( 'Expand child menu', 'white-nina'),
-		'collapse' => __( 'Collapse child menu', 'white-nina'),
+	wp_localize_script( 'whitenina-navigation', 'whiteninaScreenReaderText', array(
+		'expand' => __( 'Expand child menu', 'whitenina'),
+		'collapse' => __( 'Collapse child menu', 'whitenina'),
 	));
 	
 	if (is_singular() && comments_open() && get_option('thread_comments')) {
 		wp_enqueue_script('comment-reply');
 	}
 }
-add_action('wp_enqueue_scripts', 'white_nina_scripts');
+add_action('wp_enqueue_scripts', 'whitenina_scripts');
 
 
 /**
@@ -255,7 +255,7 @@ add_action('wp_enqueue_scripts', 'white_nina_scripts');
  *
  * @link https://git.io/vWdr2
  */
-function white_nina_skip_link_focus_fix() {
+function whitenina_skip_link_focus_fix() {
 	// The following is minified via `terser --compress --mangle -- assets/js/skip-link-focus-fix.js`.
 	?>
 	<script>
@@ -263,7 +263,7 @@ function white_nina_skip_link_focus_fix() {
 	</script>
 	<?php
 }
-add_action( 'wp_print_footer_scripts', 'white_nina_skip_link_focus_fix' );
+add_action( 'wp_print_footer_scripts', 'whitenina_skip_link_focus_fix' );
 
 /**
  * Implement the Custom Header feature.
@@ -293,4 +293,4 @@ if (defined('JETPACK__VERSION')) {
 }
 
 // Custom page walker.
-require get_template_directory() . '/inc/class-white-nina-walker-menu.php';
+require get_template_directory() . '/inc/class-whitenina-walker-menu.php';

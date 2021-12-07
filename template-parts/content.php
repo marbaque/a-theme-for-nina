@@ -25,7 +25,7 @@
 				</div>
 			<?php else : ?>
 				<figure class="top">
-					<?php the_post_thumbnail('white-nina-wide'); ?>
+					<?php the_post_thumbnail('whitenina-wide'); ?>
 					<figcaption><?php echo get_the_post_thumbnail_caption(); ?></figcaption>
 				</figure><!-- .featured-image full-bleed -->
 			<?php endif; ?>
@@ -36,7 +36,7 @@
 		<div class="item-content">
 			<div class="entry-meta">
 				<?php
-				white_nina_posted_on();
+				whitenina_posted_on();
 				?>
 			</div><!-- .entry-meta -->
 			<header class="entry-header">
@@ -56,7 +56,7 @@
 					sprintf(
 						wp_kses(
 							/* translators: %s: Name of current post. Only visible to screen readers */
-							__('Continue reading<span class="screen-reader-text"> "%s"</span>', 'white-nina'),
+							__('Continue reading<span class="screen-reader-text"> "%s"</span>', 'whitenina'),
 							array(
 								'span' => array(
 									'class' => array(),
@@ -68,14 +68,14 @@
 				);
 				wp_link_pages(
 					array(
-						'before' => '<div class="page-links">' . esc_html__('Pages:', 'white-nina'),
+						'before' => '<div class="page-links">' . esc_html__('Pages:', 'whitenina'),
 						'after'  => '</div>',
 					)
 				);
 				?>
 			</div><!-- .entry-content -->
 			<footer class="entry-footer">
-				<?php white_nina_entry_footer(); ?>
+				<?php whitenina_entry_footer(); ?>
 			</footer><!-- .entry-footer -->
 
 		</div> <!-- .item-content -->

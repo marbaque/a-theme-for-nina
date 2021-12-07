@@ -16,7 +16,7 @@
 
 	<?php if ( has_post_thumbnail() ) : ?>
 	<figure class="top">
-		<?php the_post_thumbnail('white-nina-wide'); ?>
+		<?php the_post_thumbnail('whitenina-wide'); ?>
 		<figcaption><?php echo get_the_post_thumbnail_caption(); ?></figcaption>
 	</figure><!-- .featured-image full-bleed -->
 	<?php endif; ?>
@@ -27,7 +27,7 @@
 
 		wp_link_pages(
 			array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'white-nina' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'whitenina' ),
 				'after'  => '</div>',
 			)
 		);
@@ -41,7 +41,7 @@
 				sprintf(
 					wp_kses(
 						/* translators: %s: Name of current post. Only visible to screen readers */
-						__( 'Edit <span class="screen-reader-text">%s</span>', 'white-nina' ),
+						__( 'Edit <span class="screen-reader-text">%s</span>', 'whitenina' ),
 						array(
 							'span' => array(
 								'class' => array(),

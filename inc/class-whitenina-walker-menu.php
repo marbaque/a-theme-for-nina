@@ -5,12 +5,12 @@
  *
  */
 
-if (!class_exists('White_Nina_Walker_Menu')) {
+if (!class_exists('Whitenina_Walker_Menu')) {
 	/**
 	 * CUSTOM PAGE WALKER
 	 * A custom walker for pages.
 	 */
-	class White_Nina_Walker_Menu extends Walker_Nav_Menu
+	class Whitenina_Walker_Menu extends Walker_Nav_Menu
 	{
 
 		function start_el(&$output, $item, $depth = 0, $args = [], $id = 0)

@@ -31,17 +31,30 @@ White Nina includes support for WooCommerce and for Infinite Scroll in Jetpack.
 
 == Changelog ==
 
+= 1.0.2 - Dec 7 2021 =
+* Simplified namespace to whitenina
+* fixed prefixes
+* small tweaks based on review from [http://themereview.co/prefix-all-the-things/]
+* updated license issues
+
 = 1.0.1 - Dec 4 2021 =
 * FIX wrong tag, remove single post sidebar from style.css header.
 * FIX wrong tag, remove page sidebar from style.css header.
 * TWEAK Keyboard Navigation
 * FIX Prefixing - a unique prefix for everything the Theme defines in the public namespace, including options, functions, global variables, constants, post meta, wp_enqueue_script/style handle names, add_image_size names, wp_script_add_data keys, slugs/ids for new categories created with register_block_pattern_category etc. Theme nav menu locations and sidebar IDs are exceptions.
-* FIX theme slug should be white_nina not only nina.
+* FIX theme slug should be whitenina not only nina.
 
 = 1.0 - Nov 29 2021 =
 * Initial release
 
 == Credits ==
+
+ {{{
+         Image for theme screenshot, Copyright Marcos Paulo Prado
+         License: Unsplash License
+         Source: https://unsplash.com/photos/tcyW6Im5Uug
+ }}}
+
 
 * Based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
 * normalize.css https://necolas.github.io/normalize.css/, (C) 2012-2018 Nicolas Gallagher and Jonathan Neal, [MIT](https://opensource.org/licenses/MIT)

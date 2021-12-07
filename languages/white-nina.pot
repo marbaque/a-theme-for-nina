@@ -221,7 +221,7 @@ msgid "White Nina"
 msgstr ""
 
 #. Theme URI of the plugin/theme
-msgid "https://github.com/marbaque/white-nina"
+msgid "https://github.com/marbaque/whitenina"
 msgstr ""
 
 #. Description of the plugin/theme
