@@ -5,7 +5,7 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
 Requires at least: 4.5
 Tested up to: 5.8
 Requires PHP: 5.6
-Stable tag: 1.0.0
+Stable tag: 1.0.2
 License: GNU General Public License v2 or later
 License URI: LICENSE
 
@@ -49,13 +49,22 @@ White Nina includes support for WooCommerce and for Infinite Scroll in Jetpack.
 
 == Credits ==
 
- {{{
-         Image for theme screenshot, Copyright Marcos Paulo Prado
-         License: Unsplash License
-         Source: https://unsplash.com/photos/tcyW6Im5Uug
- }}}
+Image for theme screenshot, Copyright Marcos Paulo Prado
+License: Unsplash License
+Source: https://unsplash.com/photos/tcyW6Im5Uug
 
+Code from Twenty Twenty
+Copyright (c) 2018-2021 WordPress.org
+License: GPLv2
+Source: https://wordpress.org/themes/twentytwenty/
+Included as part of the following classes and functions:
+- twentytwenty_filter_wp_list_pages_item_classes()
+- twentytwenty_add_sub_toggles_to_main_menu()
+- twentytwenty_toggle_duration()
+- TwentyTwenty_Walker_Page
+- skip-link-focus-fix
+- index navigation
 
-* Based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
-* normalize.css https://necolas.github.io/normalize.css/, (C) 2012-2018 Nicolas Gallagher and Jonathan Neal, [MIT](https://opensource.org/licenses/MIT)
-* Icons Font Awesome 5 Free https://fontawesome.com/ by Fonticons, Inc. [CC-BY 4.0 License] (https://creativecommons.org/licenses/by/4.0/)
+Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
+normalize.css https://necolas.github.io/normalize.css/, (C) 2012-2018 Nicolas Gallagher and Jonathan Neal, [MIT](https://opensource.org/licenses/MIT)
+Icons Font Awesome 5 Free https://fontawesome.com/ by Fonticons, Inc. [CC-BY 4.0 License] (https://creativecommons.org/licenses/by/4.0/)

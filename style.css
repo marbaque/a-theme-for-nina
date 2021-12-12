@@ -2375,14 +2375,14 @@ ul.primary-menu > li.menu-item-has-children > a {
 .primary-menu ul ul::after {
   border-bottom-color: transparent;
   /*rtl:ignore*/
-  border-left-color: #000;
+  border-left-color: #404040;
   bottom: auto;
   right: -1.6rem;
   top: 2rem;
 }
 
 .rtl .primary-menu ul ul::after {
-  transform: rotate(180deg);
+  transform: rotate(135deg);
 }
 
 /*
