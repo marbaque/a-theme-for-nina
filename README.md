@@ -10,7 +10,14 @@ My ultra-minimal CSS might make me look like theme tartare but that means less s
 * Smartly organized lightweight CSS.
 * Licensed under GPLv2 or later.
 * Mobile friendly main menu
-* Sleek design of default Gutenberg blocks 
+* Sleek design of default Gutenberg blocks
+* Footer Menu
+* Social links menu with icons 
+
+
+## License
+
+White Nina is distributed under the terms of the GNU GPL v2 or later.
 
 
 

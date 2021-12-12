@@ -31,6 +31,12 @@ White Nina includes support for WooCommerce and for Infinite Scroll in Jetpack.
 
 == Changelog ==
 
+= 1.0.3 - Dec 12 2021 =
+* Standarized all prefixes
+* Improved main menu accessibility
+* Fixed all error from theme review
+* updated license issues
+
 = 1.0.2 - Dec 7 2021 =
 * Simplified namespace to whitenina
 * fixed prefixes
