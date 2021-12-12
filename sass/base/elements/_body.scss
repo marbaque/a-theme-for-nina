@@ -1,5 +1,5 @@
 body {
-	background: $color__background-body; // Fallback for when there is no custom background color defined.
+  background: $color__background-body; // Fallback for when there is no custom background color defined.
 }
 
 // .wrapper {
@@ -9,39 +9,112 @@ body {
 
 .page,
 .single {
+  .migajas {
+    font-size: 0.7em;
+  }
 
-    .migajas {
-        font-size: .7em;
-    }
-
-	.widget-area {
-
-	}
+  .widget-area {
+  }
 }
 
 .site-main {
-    margin: 0 auto;
-	padding: 40px 20px 80px;
+  margin: 0 auto;
+  padding: 40px 20px 80px;
 }
 .widget-area {
-    padding: 40px 0 80px;
+  padding: 40px 0 80px;
 }
 
-// footer
+/*----------------------------------*
+*
+* footer
+*
+*----------------------------------*/
 .site-footer {
-    font-size: 80%;
-    padding: 40px 20px;
-    text-align: center;
-    border-top: 1px solid silver;
+  font-size: 80%;
+  padding: 40px 20px;
+  text-align: center;
+  border-top: 1px solid silver;
 
-    .licencia {
-        margin-top: 40px;
-        font-size: 80%;
-        color: silver;
-        a {
-            border-width: 0;
-            color: currentColor;
+  .footer-menu-wrapper {
+    ul {
+      list-style: none;
+      padding-left: 0;
+      margin-left: 0;
+      text-align: center;
 
-        }
+      li {
+        display: inline-block;
+        margin: 0 0.5rem;
+      }
     }
+
+    .social-menu {
+      a {
+        border-bottom: none;
+
+        &::before {
+          content: "\f0c1";
+          font-family: "Font Awesome Solid";
+          margin-right: 0.25rem;
+        }
+        &[href*="twitter.com"] {
+          &:before {
+            font-family: "Font Awesome Brands";
+            content: "\f099";
+          }
+        }
+        &[href*="facebook.com"] {
+          &:before {
+            font-family: "Font Awesome Brands";
+            content: "\f082";
+          }
+        }
+
+        &[href*="instagram.com"] {
+          &:before {
+            font-family: "Font Awesome Brands";
+            content: "\f16d";
+          }
+        }
+        &[href*="linkedin.com"] {
+          &:before {
+            font-family: "Font Awesome Brands";
+            content: "\f08c";
+          }
+        }
+        &[href*="github.com"] {
+          &:before {
+            font-family: "Font Awesome Brands";
+            content: "\f09b";
+          }
+        }
+      }
+    }
+
+    @media screen and (min-width: $query__md) {
+      display: flex;
+      justify-content: space-between;
+
+      .footer-menu {
+        flex: 1 0 70%;
+        text-align: left;
+      }
+
+      .social-menu {
+        flex: 1 0 30%;
+        text-align: right;
+      }
+    }
+  }
+
+  .site-info {
+    margin-top: 40px;
+    font-size: 0.8rem;
+    color: gray;
+    a {
+      border-width: 0;
+      color: currentColor;
+    }
+  }
 }

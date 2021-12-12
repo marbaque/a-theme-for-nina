@@ -66,5 +66,8 @@ Included as part of the following classes and functions:
 - index navigation
 
 Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
+
 normalize.css https://necolas.github.io/normalize.css/, (C) 2012-2018 Nicolas Gallagher and Jonathan Neal, [MIT](https://opensource.org/licenses/MIT)
-Icons Font Awesome 5 Free https://fontawesome.com/ by Fonticons, Inc. [CC-BY 4.0 License] (https://creativecommons.org/licenses/by/4.0/)
+
+Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com
+License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
