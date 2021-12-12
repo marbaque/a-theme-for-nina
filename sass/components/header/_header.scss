@@ -9,6 +9,7 @@
   // box-shadow: 0 1px 5px hsla(0,0,0,0.1);
   z-index: 99;
   height: 100px;
+  position: relative;
 
   ::-moz-selection {
     background: none;
@@ -27,6 +28,7 @@
   .site-branding {
     grid-column: 1 / span 3;
     display: flex;
+    align-items: center;
 
     @media screen and (min-width: $query__md) {
       grid-column: 1 / span 1;

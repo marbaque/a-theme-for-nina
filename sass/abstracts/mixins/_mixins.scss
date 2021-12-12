@@ -29,6 +29,16 @@
   text-overflow: ellipsis;
 }
 
+@mixin layered-box {
+  box-shadow:
+    0 1px 1px hsl(0deg 0% 0% / 0.075),
+    0 2px 2px hsl(0deg 0% 0% / 0.075),
+    0 4px 4px hsl(0deg 0% 0% / 0.075),
+    0 8px 8px hsl(0deg 0% 0% / 0.075),
+    0 16px 16px hsl(0deg 0% 0% / 0.075)
+  ;
+}
+
 // Source: https://dev.to/stordahl_/examples-of-sass-scss-mixins-ce
 @mixin fade($fade, $timing, $length, $count, $fill){ 
   animation: $fade $timing $length;

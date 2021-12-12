@@ -53,7 +53,9 @@ if (!function_exists('whitenina_setup')) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
 			array(
-				'menu-1' => esc_html__('Menu', 'whitenina'),
+				'primary' => esc_html__('Menu', 'whitenina'),
+				'footer' => esc_html__( 'Footer', 'whitenina' ),
+				'social' => esc_html__( 'Social Links', 'whitenina' )
 			)
 		);
 
@@ -121,11 +123,11 @@ add_action('after_setup_theme', 'whitenina_setup');
  *
  * Priority 0 to make it available to lower priority callbacks.
  *
- * @global int $whitenina-content_width
+ * @global int $whitenina_content_width
  */
 function whitenina_content_width()
 {
-	$GLOBALS['content_width'] = apply_filters('whitenina_content_width', 640);
+	$GLOBALS['whitenina_content_width'] = apply_filters('whitenina_content_width', 640);
 }
 add_action('after_setup_theme', 'whitenina_content_width', 0);
 
@@ -233,7 +235,9 @@ function whitenina_scripts()
 	wp_enqueue_style('whitenina-style', get_stylesheet_uri(), array(), whitenina_version);
 	wp_style_add_data('whitenina-style', 'rtl', 'replace');
 
-	wp_enqueue_script( 'whitenina-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), whitenina_version, true );
+	//wp_enqueue_script( 'whitenina-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), whitenina_version, true );
+
+	wp_enqueue_script( 'whitenina-js', get_template_directory_uri() . '/js/index.js', array(), whitenina_version, false );
 	
 	wp_localize_script( 'whitenina-navigation', 'whiteninaScreenReaderText', array(
 		'expand' => __( 'Expand child menu', 'whitenina'),
@@ -292,5 +296,5 @@ if (defined('JETPACK__VERSION')) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
-// Custom page walker.
-require get_template_directory() . '/inc/class-whitenina-walker-menu.php';
+// Custom page walker pages.
+require get_template_directory() . '/classes/class-whitenina-walker-page.php';

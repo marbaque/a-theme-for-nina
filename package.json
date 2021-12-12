@@ -1,20 +1,21 @@
 {
-  "name": "underscores",
-  "version": "1.0.0",
-  "description": "Hi. I'm a starter theme called _s, or underscores, if you like. I'm a theme meant for hacking so don't use me as a Parent Theme. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.",
-  "author": "Automattic Theme Team",
+  "name": "whitenina",
+  "version": "1.0.2",
+  "description": "Hi. I'm a simple and beautiful theme called White Nina. I'm a theme meant for blogging and personal sites. Try me into the next, most awesome, WordPress site out there. That's what I'm here for.",
+  "author": "Mario Badilla",
   "license": "GPL-2.0-or-later",
   "keywords": [
     "WordPress",
-    "Theme"
+    "Theme",
+    "Blog"
   ],
-  "homepage": "https://github.com/Automattic/_s#readme",
+  "homepage": "https://github.com/marbaque/whitenina#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Automattic/_s.git"
+    "url": "git+https://github.com/marbaque/whitenina.git"
   },
   "bugs": {
-    "url": "https://github.com/Automattic/_s/issues"
+    "url": "https://github.com/marbaque/whitenina/issues"
   },
   "devDependencies": {
     "@wordpress/scripts": "^12.1.0",

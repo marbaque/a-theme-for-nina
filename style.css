@@ -30,6 +30,8 @@ to provide the best reading experience.
 	- Forms
 ## Layouts
 # Components
+	- Header
+  	- Header menu
 	- Navigation
 	- Posts and pages
 	- Comments
@@ -195,7 +197,8 @@ to provide the best reading experience.
   color: #FFFFFF;
 }
 
-.silver {
+.silver, .modal-menu > li > a,
+.modal-menu > li > .ancestor-wrapper > a {
   color: #DDDDDD;
 }
 
@@ -216,7 +219,7 @@ to provide the best reading experience.
   border-color: #001F3F;
 }
 
-.border--blue {
+.border--blue, .modal-menu li {
   border-color: #0074D9;
 }
 
@@ -285,7 +288,8 @@ to provide the best reading experience.
   fill: #001F3F;
 }
 
-.fill-blue {
+.fill-blue, .nav-toggle .toggle-icon,
+.nav-toggle svg {
   fill: #0074D9;
 }
 
@@ -1028,6 +1032,17 @@ dd {
   margin: 0 1.5em 1.5em;
 }
 
+.reset-list-style,
+.reset-list-style ul,
+.reset-list-style ol {
+  list-style: none;
+  margin: 0;
+}
+
+.reset-list-style li {
+  margin: 0;
+}
+
 /* Make sure embeds and iframes fit their containers. */
 embed,
 iframe,
@@ -1108,6 +1123,26 @@ a {
 a:focus {
   outline: 2px double #4169e1;
 }
+/* Skip Link --------------------------------- */
+.skip-link {
+  left: -9999rem;
+  top: 2.5rem;
+  z-index: 999999999;
+  text-decoration: underline;
+}
+.skip-link:focus {
+  display: block;
+  left: 6px;
+  top: 7px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  z-index: 100000;
+  right: auto;
+}
+
 /* Forms
 --------------------------------------------- */
 button,
@@ -1246,204 +1281,6 @@ textarea {
 --------------------------------------------------------------*/
 /* Navigation
 --------------------------------------------- */
-.main-navigation {
-  display: block;
-  clear: left;
-  /*.menu-item-has-children,
-  .page_item_has_children {
-    //min-width: 218px;
-  }*/
-}
-.main-navigation ul {
-  display: none;
-  list-style: none;
-  margin: 0;
-  padding-top: 1em;
-  padding-left: 0;
-}
-.main-navigation ul.menu {
-  background: #404040;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  padding-top: 120px;
-  z-index: 10;
-}
-.main-navigation ul ul {
-  display: none;
-  top: 1.5em;
-  z-index: 99999;
-  margin-bottom: 1.5em;
-  background-color: rgba(252, 252, 252, 0.1);
-}
-.main-navigation ul ul ul {
-  top: 0;
-}
-.main-navigation ul ul li {
-  padding-left: 1em;
-}
-.main-navigation ul ul li:hover > ul, .main-navigation ul ul li.focus > ul {
-  left: 100%;
-}
-.main-navigation ul ul a {
-  width: 100%;
-}
-.main-navigation ul li:hover > ul,
-.main-navigation ul li.focus > ul {
-  left: auto;
-}
-.main-navigation li {
-  position: relative;
-}
-.main-navigation a {
-  display: inline-block;
-  width: 100%;
-  padding: 1em 2em;
-  text-decoration: none;
-  color: #fff;
-}
-.main-navigation a:hover,
-.main-navigation a:focus {
-  text-decoration: none;
-}
-.main-navigation .menu-item-has-children > a,
-.main-navigation .page_item_has_children > a {
-  padding-right: 2em;
-}
-
-button.dropdown-toggle {
-  position: absolute;
-  right: 1rem;
-  border: none;
-  background: inherit;
-  line-height: 1em;
-  padding: 0.4em 1em 0.4em 0.5em;
-  font-weight: 700;
-  font-size: 1.5em;
-  cursor: pointer;
-  color: #fff;
-}
-@media screen and (min-width: 780px) {
-  button.dropdown-toggle {
-    right: 0;
-  }
-}
-
-.menu-toggle {
-  display: block;
-  margin-left: auto;
-  height: 50px;
-  width: 50px;
-  padding: 0.6em;
-  font-size: 1rem;
-  text-transform: uppercase;
-  border: none;
-  background: white;
-  cursor: pointer;
-  line-height: 0.5;
-  z-index: 90;
-  position: absolute;
-  right: 20px;
-}
-.menu-toggle:active, .menu-toggle:hover {
-  background-color: #f4f4f4;
-}
-.menu-toggle:before {
-  content: "+";
-  font-size: 2em;
-}
-
-.toggled-on ul.menu {
-  animation: fadeIn ease 0.5s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forward;
-}
-.toggled-on .menu-toggle {
-  color: #fff;
-  border-color: #fff;
-  background: #404040;
-}
-.toggled-on .menu-toggle::before {
-  content: "×";
-}
-
-/* Toggle small menu and children on */
-.toggled-on ul,
-.sub-menu.toggled-on {
-  display: block;
-  animation: fadeIn ease 0.5s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forward;
-}
-
-@media screen and (min-width: 780px) {
-  .menu-toggle {
-    display: none;
-  }
-
-  .main-navigation ul {
-    justify-content: flex-end;
-    padding-top: 0;
-    display: block;
-    display: flex;
-    flex-wrap: wrap;
-    /* If you want dropdowns to open on hover, uncomment this: */
-  }
-  .main-navigation ul.menu {
-    position: relative;
-    width: auto;
-    background-color: transparent;
-    padding-top: 1em;
-  }
-  .main-navigation ul.menu > li {
-    margin: 0 0.25rem;
-  }
-  .main-navigation ul ul {
-    flex-direction: column;
-    background-color: #f4f4f4;
-    margin-left: 0;
-    background-color: rgba(128, 128, 128, 0.05);
-    margin-bottom: 0;
-    border-bottom: 2px solid #404040;
-    margin-top: -2px;
-  }
-  .main-navigation ul ul li {
-    padding-left: 0;
-  }
-  .main-navigation ul ul li a {
-    min-width: 150px;
-    max-width: 220px;
-    background: none;
-    border: none;
-    text-align: left;
-  }
-  .main-navigation ul li a {
-    padding: 0.4em 1em;
-    min-width: 150px;
-    text-align: center;
-  }
-  .main-navigation ul a {
-    display: inline-block;
-    padding: 1em 2em;
-    text-decoration: none;
-    color: #404040;
-  }
-  .main-navigation ul .menu-item-has-children,
-.main-navigation ul .page_item_has_children {
-    min-width: 218px;
-  }
-  .main-navigation ul .menu-item-has-children > a,
-.main-navigation ul .page_item_has_children > a {
-    padding-right: 2rem;
-  }
-
-  button.dropdown-toggle {
-    color: currentColor;
-    font-size: 1rem;
-    top: 0.25rem;
-  }
-}
 .site-main .comment-navigation,
 .site-main .posts-navigation,
 .site-main .post-navigation {
@@ -2222,6 +2059,7 @@ h1.page-title {
   grid-gap: 10px;
   z-index: 99;
   height: 100px;
+  position: relative;
 }
 .site-header ::-moz-selection {
   background: none;
@@ -2240,6 +2078,7 @@ h1.page-title {
 .site-header .site-branding {
   grid-column: 1/span 3;
   display: flex;
+  align-items: center;
 }
 @media screen and (min-width: 780px) {
   .site-header .site-branding {
@@ -2311,6 +2150,674 @@ h1.page-title {
   }
 }
 
+/* Header menu
+*/
+/* Header Navigation ------------------------- */
+.header-navigation-wrapper {
+  display: none;
+}
+
+/* Header Toggles ---------------------------- */
+.header-toggles {
+  display: none;
+}
+
+.site-header .toggle {
+  align-items: center;
+  display: flex;
+  overflow: visible;
+  padding: 0 2rem;
+}
+.site-header .toggle svg {
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+.site-header .toggle:focus .toggle-text, .site-header .toggle:hover .toggle-text {
+  text-decoration: underline;
+}
+.site-header .toggle .toggle path {
+  fill: currentColor;
+}
+.site-header .toggle .toggle-inner {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  height: 2.3rem;
+  position: relative;
+}
+.site-header .toggle .toggle-inner .toggle-icon {
+  display: block;
+}
+.site-header .toggle .toggle-inner .toggle-text {
+  color: #404040;
+  font-size: 0.8rem;
+  margin-top: 0.8rem;
+  width: auto;
+  white-space: nowrap;
+  word-break: break-all;
+}
+
+.overlay-header .toggle-text {
+  color: inherit;
+}
+
+/* Toggles ----------------------------------- */
+.toggle {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  color: inherit;
+  cursor: pointer;
+  font-family: inherit;
+  position: relative;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  text-align: inherit;
+  user-select: none;
+}
+
+button.toggle {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  font-size: inherit;
+  font-weight: 400;
+  letter-spacing: inherit;
+  padding: 0;
+  text-transform: none;
+}
+
+/* Navigation Toggle ------------------------- */
+.nav-toggle {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  top: 0;
+}
+
+.nav-toggle .toggle-icon,
+.nav-toggle svg {
+  height: 0.8rem;
+  width: 2.1rem;
+}
+
+.nav-toggle .toggle-inner {
+  padding-top: 0.8rem;
+}
+
+/* Primary Menu ---------------------------- */
+.primary-menu-wrapper {
+  display: none;
+}
+
+ul.primary-menu {
+  display: flex;
+  font-size: 1rem;
+  letter-spacing: -0.0277em;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  margin: -0.8rem 0 0 -1.6rem;
+}
+ul.primary-menu .icon {
+  display: block;
+  width: 0.85rem;
+  height: 0.85rem;
+  position: absolute;
+  pointer-events: none;
+}
+ul.primary-menu li {
+  font-size: inherit;
+  line-height: 1.2;
+  position: relative;
+}
+ul.primary-menu > li {
+  margin: 0.8rem 0 0 1.6rem;
+}
+ul.primary-menu > li .icon {
+  right: 1rem;
+  top: calc(50% - 0.35rem);
+  text-align: center;
+  font-weight: bolder;
+  line-height: 1;
+}
+ul.primary-menu > li.menu-item-has-children > a {
+  padding-right: 3rem;
+}
+
+.primary-menu a {
+  color: inherit;
+  display: block;
+  line-height: 1.2;
+  text-decoration: none;
+  word-break: normal;
+  word-wrap: normal;
+  padding: 1rem 1rem 0.2rem;
+}
+
+.primary-menu li.current-menu-item > a:hover,
+.primary-menu li.current-menu-item > .link-icon-wrapper > a:hover,
+.primary-menu li.current-menu-item > a:focus,
+.primary-menu li.current-menu-item > .link-icon-wrapper > a:focus {
+  text-decoration: none;
+}
+
+/* SUB MENU */
+.primary-menu ul {
+  background: #fff;
+  border-radius: 0;
+  color: #404040;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075), 0 2px 2px rgba(0, 0, 0, 0.075), 0 4px 4px rgba(0, 0, 0, 0.075), 0 8px 8px rgba(0, 0, 0, 0.075), 0 16px 16px rgba(0, 0, 0, 0.075);
+  opacity: 0;
+  padding: 0;
+  position: absolute;
+  right: 9999rem;
+  top: calc(100% + 0.25rem);
+  transition: opacity 0.1s 0.15s linear, transform 0.1s 0.15s linear, right 0s 0.5s;
+  transform: translateY(0.6rem);
+  width: 14rem;
+  z-index: 1;
+}
+.primary-menu ul a {
+  background: transparent;
+  border: none;
+  color: inherit;
+  display: block;
+  padding: 1rem;
+  transition: background-color 0.15s linear;
+  width: 100%;
+}
+.primary-menu ul a:hover, .primary-menu ul a:focus {
+  background-color: #f4f4f4;
+}
+.primary-menu ul li.menu-item-has-children > a {
+  padding-right: 2rem;
+}
+.primary-menu li.menu-item-has-children:hover > ul,
+.primary-menu li.menu-item-has-children:focus > ul,
+.primary-menu li.menu-item-has-children.focus > ul {
+  right: 0;
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.15s linear, transform 0.15s linear;
+}
+
+.primary-menu ul li.menu-item-has-children .icon {
+  position: absolute;
+  right: 1rem;
+  top: calc(50% - 0.5rem);
+}
+
+/* DEEP DOWN */
+.primary-menu ul ul {
+  top: 0;
+}
+
+.primary-menu ul li.menu-item-has-children:hover > ul,
+.primary-menu ul li.menu-item-has-children:focus > ul,
+.primary-menu ul li.menu-item-has-children.focus > ul {
+  right: calc(100% + 0.5rem);
+}
+
+.primary-menu ul ul::before {
+  bottom: 0;
+  height: auto;
+  left: auto;
+  right: -2rem;
+  top: 0;
+  width: 2rem;
+}
+
+.primary-menu ul ul::after {
+  border-bottom-color: transparent;
+  /*rtl:ignore*/
+  border-left-color: #000;
+  bottom: auto;
+  right: -1.6rem;
+  top: 2rem;
+}
+
+.rtl .primary-menu ul ul::after {
+  transform: rotate(180deg);
+}
+
+/*
+ * Enable nav submenu expansion with tapping on arrows on large-viewport
+ * touch interfaces (e.g. tablets or laptops with touch screens).
+ * These rules are supported by all browsers (>IE11) and when JS is disabled.
+ */
+@media (any-pointer: coarse) {
+  .primary-menu > li.menu-item-has-children > a {
+    padding-right: 0;
+    margin-right: 2rem;
+  }
+
+  .primary-menu ul li.menu-item-has-children > a {
+    margin-right: 4.5rem;
+    padding-right: 0;
+    width: unset;
+  }
+}
+/* Repeat previous rules for IE11 (when JS enabled for polyfill). */
+body.touch-enabled .primary-menu > li.menu-item-has-children > a {
+  padding-right: 0;
+  margin-right: 2rem;
+}
+
+body.touch-enabled .primary-menu ul li.menu-item-has-children > a {
+  margin-right: 4.5rem;
+  padding-right: 0;
+  width: unset;
+}
+
+/* -------------------------------------------------------------------------- */
+/*	5. Menu Modal
+/* -------------------------------------------------------------------------- */
+.menu-modal {
+  background: #fff;
+  display: none;
+  opacity: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: fixed;
+  bottom: 0;
+  left: -99999rem;
+  right: 99999rem;
+  top: 0;
+  transition: opacity 0.25s ease-in, left 0s 0.25s, right 0s 0.25s;
+  z-index: 99;
+}
+.menu-modal.show-modal {
+  display: flex;
+}
+.menu-modal.active {
+  left: 0;
+  opacity: 1;
+  right: 0;
+  transition: opacity 0.2s ease-out;
+}
+.menu-modal .menu-modal-inner {
+  background: #404040;
+  color: #fff;
+  display: flex;
+  justify-content: stretch;
+  overflow: auto;
+  -ms-overflow-style: auto;
+  width: 100%;
+}
+.menu-modal .menu-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.admin-bar .menu-modal {
+  top: 32px;
+}
+@media (max-width: 782px) {
+  .admin-bar .menu-modal {
+    top: 46px;
+  }
+}
+
+button.close-nav-toggle {
+  align-items: center;
+  display: flex;
+  font-size: 1rem;
+  justify-content: flex-end;
+  padding: 2.2rem 2rem;
+  width: 100%;
+}
+button.close-nav-toggle svg {
+  height: 1.2rem;
+  width: 1.2rem;
+  color: #fff;
+}
+button.close-nav-toggle .toggle-text {
+  margin-right: 1rem;
+}
+
+.menu-modal .menu-top {
+  flex-shrink: 0;
+}
+
+/* Main Menu --------------------------------- */
+.modal-menu {
+  position: relative;
+  left: calc(50% - 50vw);
+  width: 100vw;
+  padding-left: 0;
+}
+.modal-menu li {
+  border-style: solid;
+  border-width: 0.1rem 0 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  line-height: 1;
+  justify-content: flex-start;
+  margin: 0;
+}
+.modal-menu > li > a,
+.modal-menu > li > .ancestor-wrapper > a {
+  font-size: 1.25rem;
+}
+.modal-menu .ancestor-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.modal-menu a {
+  display: block;
+  padding: 2rem 2rem;
+  text-decoration: none;
+  width: 100%;
+  border-bottom: none;
+}
+.modal-menu > li:last-child {
+  border-bottom-width: 0.1rem;
+}
+.modal-menu a:focus,
+.modal-menu a:hover,
+.modal-menu li.current-menu-item > .ancestor-wrapper > a,
+.modal-menu li.current_page_ancestor > .ancestor-wrapper > a {
+  text-decoration: underline;
+}
+
+button.sub-menu-toggle {
+  border-left: 0.1rem solid #f4f4f4;
+  flex-shrink: 0;
+  margin: 1rem 0;
+  padding: 0 2.5rem;
+}
+
+button.sub-menu-toggle svg {
+  height: 1.1rem;
+  transition: transform 0.15s linear;
+  width: 1.1rem;
+}
+
+button.sub-menu-toggle.active svg {
+  transform: rotate(135deg);
+}
+
+.modal-menu ul {
+  display: none;
+  margin: 0;
+  width: 100%;
+  padding-left: 0;
+}
+.modal-menu ul li {
+  border-left-width: 0.1rem;
+}
+.modal-menu ul li a {
+  color: inherit;
+  font-weight: 500;
+}
+
+/* Main menu animation ----------------------- */
+.menu-wrapper .menu-item {
+  position: relative;
+}
+
+.menu-wrapper .active {
+  display: block;
+}
+
+.menu-wrapper.is-toggling {
+  pointer-events: none;
+}
+
+.menu-wrapper.is-toggling .menu-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.menu-wrapper.is-toggling .menu-bottom .social-menu .menu-item {
+  width: auto;
+}
+
+.menu-wrapper.is-animating .menu-item,
+.menu-wrapper.is-animating .toggling-target {
+  transition-duration: 250ms;
+}
+
+.menu-wrapper.is-animating .menu-item {
+  transition-property: transform;
+}
+
+.menu-wrapper.is-toggling .toggling-target {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 1;
+}
+
+.menu-wrapper.is-toggling .toggling-target.active {
+  opacity: 0;
+}
+
+.menu-wrapper.is-animating.is-toggling .toggling-target {
+  display: block;
+  transition-property: opacity;
+  opacity: 0;
+}
+
+.menu-wrapper.is-animating.is-toggling .toggling-target.active {
+  opacity: 1;
+}
+
+.menu-wrapper.is-toggling .modal-menu > li:last-child li {
+  border-top-color: transparent;
+  border-bottom-width: 0.1rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .menu-wrapper.is-animating .menu-item,
+.menu-wrapper.is-animating .toggling-target {
+    transition-duration: 1ms !important;
+  }
+}
+@media screen and (min-width: 780px) {
+  /* HEADER TOGGLES */
+  .toggle-inner .toggle-text {
+    font-size: 1.2rem;
+  }
+
+  .search-toggle {
+    left: 2rem;
+  }
+
+  .nav-toggle {
+    right: 2rem;
+  }
+
+  /* Menu Modal ---------------------------- */
+  button.close-nav-toggle {
+    font-size: 1.8rem;
+    padding: 4rem 0;
+  }
+
+  button.close-nav-toggle svg {
+    height: 2rem;
+    width: 2rem;
+  }
+
+  button.close-nav-toggle .toggle-text {
+    margin-right: 2.1rem;
+  }
+
+  .modal-menu {
+    left: auto;
+    width: 100%;
+  }
+
+  .modal-menu > li > a,
+.modal-menu > li > .ancestor-wrapper > a {
+    font-size: 2.4rem;
+    padding: 2.5rem 0;
+  }
+
+  .modal-menu ul li {
+    border-left-color: transparent;
+  }
+
+  .modal-menu > li > .ancestor-wrapper > button.sub-menu-toggle {
+    padding: 0 3rem;
+  }
+
+  .modal-menu > li > .ancestor-wrapper > button.sub-menu-toggle svg {
+    height: 1.1rem;
+    width: 1.8rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  /* HEADER NAVIGATION */
+  .header-navigation-wrapper {
+    align-items: center;
+    display: flex;
+  }
+
+  .primary-menu-wrapper {
+    display: block;
+    width: 100%;
+  }
+
+  /* HEADER TOGGLES */
+  .mobile-search-toggle,
+.mobile-nav-toggle {
+    display: none !important;
+  }
+
+  .primary-menu-wrapper + .header-toggles {
+    margin-left: 3rem;
+  }
+
+  .header-toggles {
+    display: flex;
+    flex-shrink: 0;
+    margin-right: -3rem;
+  }
+
+  .site-header .toggle {
+    height: 4.4rem;
+    padding: 0 3rem;
+    position: relative;
+    bottom: auto;
+    left: auto;
+    right: auto;
+    top: auto;
+    width: auto;
+  }
+
+  .site-header .toggle-wrapper {
+    position: relative;
+  }
+
+  .site-header .toggle-wrapper::before {
+    background: #dedfdf;
+    content: "";
+    display: block;
+    height: 2.7rem;
+    position: absolute;
+    left: 0;
+    top: calc(50% - 1.35rem);
+    width: 0.1rem;
+  }
+
+  .site-header .toggle-wrapper:first-child::before {
+    content: none;
+  }
+
+  .site-header .primary-menu-wrapper + .header-toggles .toggle-wrapper:first-child::before {
+    content: "";
+  }
+
+  .nav-toggle-wrapper:not(.has-expanded-menu) {
+    display: none;
+  }
+
+  .toggle-inner {
+    position: static;
+  }
+
+  .toggle-inner .toggle-text {
+    left: 0;
+    right: 0;
+    text-align: center;
+    top: calc(100% - 0.3rem);
+    width: auto;
+  }
+
+  .header-toggles:only-child .nav-toggle .toggle-inner {
+    padding-top: 0;
+  }
+
+  .header-toggles:only-child .toggle-inner {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+
+  .header-toggles:only-child .toggle-inner .svg-icon {
+    order: 1;
+  }
+
+  .header-toggles:only-child .toggle-inner .toggle-text {
+    position: static;
+    padding-right: 20px;
+    font-size: 15px;
+    color: inherit;
+  }
+
+  /* Menu Modal ---------------------------- */
+  .menu-modal {
+    opacity: 1;
+    justify-content: flex-end;
+    padding: 0;
+    transition: background-color 0.3s ease-in, left 0s 0.3s, right 0s 0.3s;
+  }
+
+  .menu-modal.cover-modal {
+    background: rgba(0, 0, 0, 0);
+  }
+
+  .menu-modal.active {
+    background: rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease-out;
+  }
+
+  .menu-wrapper.section-inner {
+    width: calc(100% - 8rem);
+  }
+
+  .menu-modal-inner {
+    box-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    padding: 0;
+    transform: translateX(20rem);
+    transition: transform 0.2s ease-in, opacity 0.2s ease-in;
+    width: 50rem;
+  }
+
+  .menu-modal.active .menu-modal-inner {
+    opacity: 1;
+    transform: translateX(0);
+    transition-timing-function: ease-out;
+  }
+
+  .mobile-menu {
+    display: none;
+  }
+}
 /*--------------------------------------------------------------
 # Plugins
 --------------------------------------------------------------*/
