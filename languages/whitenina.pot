@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: White Nina\n"
-"POT-Creation-Date: 2021-11-29 22:12-0600\n"
-"PO-Revision-Date: 2021-11-29 22:12-0600\n"
+"POT-Creation-Date: 2021-12-12 09:51-0600\n"
+"PO-Revision-Date: 2021-12-12 09:51-0600\n"
 "Last-Translator: Mario Badilla <mario.badilla@gmail.com>\n"
 "Language-Team: Mario Badilla <mario.badilla@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -41,6 +41,16 @@ msgstr ""
 msgid "Try looking in the monthly archives. %1$s"
 msgstr ""
 
+#. translators: %d: ID of a post.
+#: classes/class-whitenina-walker-page.php:61
+#, php-format
+msgid "#%d (no title)"
+msgstr ""
+
+#: classes/class-whitenina-walker-page.php:98 inc/template-tags.php:220
+msgid "Show sub menu"
+msgstr ""
+
 #. translators: 1: title.
 #: comments.php:35
 #, php-format
@@ -60,62 +70,71 @@ msgstr[1] ""
 msgid "Comments are closed."
 msgstr ""
 
-#: footer.php:16
+#: footer.php:48
 msgid "https://wordpress.org/"
 msgstr ""
 
 #. translators: %s: CMS name, i.e. WordPress.
-#: footer.php:19
+#: footer.php:51
 #, php-format
 msgid "Proudly powered by %s"
 msgstr ""
 
 #. translators: 1: Theme name, 2: Theme author.
-#: footer.php:25
+#: footer.php:57
 #, php-format
 msgid "Theme: %1$s by %2$s."
 msgstr ""
 
-#: functions.php:56
+#: functions.php:56 header.php:63
 msgid "Menu"
 msgstr ""
 
-#: functions.php:139
+#: functions.php:57
+msgid "Footer"
+msgstr ""
+
+#: functions.php:58
+msgid "Social Links"
+msgstr ""
+
+#: functions.php:143
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:141 functions.php:152
+#: functions.php:145 functions.php:156
 msgid "Add widgets here."
 msgstr ""
 
-#: functions.php:150
+#: functions.php:154
 msgid "Page Sidebar"
 msgstr ""
 
-#: functions.php:174
+#: functions.php:178
 msgctxt "Karla font: on or off"
 msgid "on"
 msgstr ""
 
-#: functions.php:175
+#: functions.php:179
 msgctxt "Roboto+Slab: on or off"
 msgid "on"
 msgstr ""
 
-#: functions.php:237
+#: functions.php:243
 msgid "Expand child menu"
 msgstr ""
 
-#: functions.php:238
+#: functions.php:244
 msgid "Collapse child menu"
 msgstr ""
 
-#: header.php:28
+#: header.php:29
 msgid "Skip to content"
 msgstr ""
 
-#: header.php:59
-msgid "Primary Menu"
+#: header.php:67
+msgctxt "menu"
+msgid "Horizontal"
 msgstr ""
 
 #. translators: %s: post date.
@@ -214,6 +233,15 @@ msgstr ""
 #: template-parts/content.php:59
 #, php-format
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr ""
+
+#: template-parts/modal-menu.php:22
+msgid "Close Menu"
+msgstr ""
+
+#: template-parts/modal-menu.php:35
+msgctxt "menu"
+msgid "Mobile"
 msgstr ""
 
 #. Theme Name of the plugin/theme
