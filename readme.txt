@@ -31,6 +31,9 @@ White Nina includes support for Infinite Scroll in Jetpack.
 
 == Changelog ==
 
+= 1.0.8 - Dec 13 2021 =
+* Added Copyright to readme
+
 = 1.0.7 - Dec 13 2021 =
 * Image license fix
 
