@@ -27,9 +27,14 @@ best reading experience.
 
 = Does this theme support any plugins? =
 
-White Nina includes support for WooCommerce and for Infinite Scroll in Jetpack.
+White Nina includes support for Infinite Scroll in Jetpack.
 
 == Changelog ==
+
+= 1.0.4 - Dec 13 2021 =
+* Added two footer menus
+* Minor fixes
+* Added fontawesome using SASS
 
 = 1.0.3 - Dec 12 2021 =
 * Standarized all prefixes
