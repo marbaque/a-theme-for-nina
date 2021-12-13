@@ -32,7 +32,7 @@ White Nina includes support for Infinite Scroll in Jetpack.
 == Changelog ==
 
 = 1.2.0 - Dec 13 2021 =
-* Change text domain to white-nina
+* Change text domain and prefixes to white-nina
 
 = 1.0.9 - Dec 13 2021 =
 * Added Copyright to readme
