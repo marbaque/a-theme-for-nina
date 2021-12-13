@@ -83,8 +83,8 @@ White Nina WordPress Theme is derived from Underscores WordPress Theme, Copyrigh
 Underscores WordPress Theme is distributed under the terms of the GNU GPL
 
 Image for theme screenshot, Copyright Fredrik Rubensson, modified by Mario Badilla
-License: Attribution-ShareAlike 2.0 Generic (CC BY-SA 2.0)
-Source: https://creativecommons.org/licenses/by-sa/2.0/
+License: Attribution-ShareAlike 2.0 Generic (CC BY-SA 2.0) [https://creativecommons.org/licenses/by-sa/2.0/]
+Source: https://flic.kr/p/2makER
 
 Code from Twenty Twenty
 Copyright (c) 2018-2021 WordPress.org
