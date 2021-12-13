@@ -7,7 +7,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package White Nina White
+ * @package White_Nina
  */
 
 /*

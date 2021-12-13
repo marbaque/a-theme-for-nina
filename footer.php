@@ -7,7 +7,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package White Nina
+ * @package White_Nina
  */
 
 ?>
@@ -61,6 +61,7 @@
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
+
 </body>
 
 </html>

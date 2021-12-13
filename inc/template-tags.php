@@ -4,7 +4,7 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package White Nina
+ * @package White_Nina
  */
 
 if ( ! function_exists( 'whitenina_posted_on' ) ) :

@@ -5,7 +5,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package White Nina
+ * @package White_Nina
  */
 
 if (!defined('whitenina_version')) {

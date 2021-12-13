@@ -4,7 +4,7 @@
  *
  * @link https://jetpack.com/
  *
- * @package White Nina
+ * @package White_Nina
  */
 
 /**

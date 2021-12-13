@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
  *
- * @package White Nina
+ * @package White_Nina
  */
 
 get_header();

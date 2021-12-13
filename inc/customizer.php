@@ -2,7 +2,7 @@
 /**
  * Nina Theme Customizer
  *
- * @package White Nina
+ * @package White_Nina
  */
 
 /**
