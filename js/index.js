@@ -12,7 +12,7 @@
 	Namespace
 --------------------------------------------------------------------------------------------------- */
 
-var white-nina = whitenina || {};
+var whitenina = whitenina || {};
 
 // Set a default value for scrolled.
 whitenina.scrolled = 0;
