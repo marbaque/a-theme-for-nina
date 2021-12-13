@@ -10,7 +10,7 @@
 
 if (!defined('whitenina_version')) {
 	// Replace the version number of the theme on each release.
-	define('whitenina_version', '1.0.5');
+	define('whitenina_version', '1.0.6');
 }
 
 if (!function_exists('whitenina_setup')) :
