@@ -1,4 +1,4 @@
-Nina
+White Nina
 ===
 
 Hi. I'm a simple and beautiful theme called White Nina. I'm a theme meant for blogging and personal sites. Try me into the next, most awesome, WordPress site out there. That's what I'm here for.

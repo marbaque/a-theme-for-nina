@@ -31,6 +31,9 @@ White Nina includes support for Infinite Scroll in Jetpack.
 
 == Changelog ==
 
+= 1.0.7 - Dec 13 2021 =
+* Image license fix
+
 = 1.0.6 - Dec 13 2021 =
 * Added license to Readme
 
@@ -61,7 +64,7 @@ White Nina includes support for Infinite Scroll in Jetpack.
 = 1.0 - Nov 29 2021 =
 * Initial release
 
-== Credits ==
+== Copyright ==
 
 White Nina WordPress Theme, Copyright 2021 by Mario Badilla
 White Nina is distributed under the terms of the GNU GPL
