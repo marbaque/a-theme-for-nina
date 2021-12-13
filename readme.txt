@@ -82,9 +82,9 @@ along with this program.  If not, see http://www.gnu.org/licenses/gpl-2.0.html.
 White Nina WordPress Theme is derived from Underscores WordPress Theme, Copyright 2013 Automattic, Inc.
 Underscores WordPress Theme is distributed under the terms of the GNU GPL
 
-Image for theme screenshot, Copyright Marcos Paulo Prado
-License: Unsplash License
-Source: https://unsplash.com/photos/tcyW6Im5Uug
+Image for theme screenshot, Copyright Fredrik Rubensson, modified by Mario Badilla
+License: Attribution-ShareAlike 2.0 Generic (CC BY-SA 2.0)
+Source: https://creativecommons.org/licenses/by-sa/2.0/
 
 Code from Twenty Twenty
 Copyright (c) 2018-2021 WordPress.org
