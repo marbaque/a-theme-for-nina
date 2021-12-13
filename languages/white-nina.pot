@@ -1,16 +1,16 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: White Nina\n"
-"POT-Creation-Date: 2021-12-12 09:51-0600\n"
-"PO-Revision-Date: 2021-12-12 09:51-0600\n"
+"POT-Creation-Date: 2021-12-13 11:53-0600\n"
+"PO-Revision-Date: 2021-12-13 11:53-0600\n"
 "Last-Translator: Mario Badilla <mario.badilla@gmail.com>\n"
 "Language-Team: Mario Badilla <mario.badilla@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.0\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"X-Generator: Poedit 3.0.1\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: style.css\n"
@@ -42,12 +42,12 @@ msgid "Try looking in the monthly archives. %1$s"
 msgstr ""
 
 #. translators: %d: ID of a post.
-#: classes/class-whitenina-walker-page.php:61
+#: classes/class-white-nina-walker-page.php:61
 #, php-format
 msgid "#%d (no title)"
 msgstr ""
 
-#: classes/class-whitenina-walker-page.php:98 inc/template-tags.php:220
+#: classes/class-white-nina-walker-page.php:98 inc/template-tags.php:220
 msgid "Show sub menu"
 msgstr ""
 
@@ -91,7 +91,7 @@ msgid "Menu"
 msgstr ""
 
 #: functions.php:57
-msgid "Footer"
+msgid "Footer Menu"
 msgstr ""
 
 #: functions.php:58
@@ -249,7 +249,7 @@ msgid "White Nina"
 msgstr ""
 
 #. Theme URI of the plugin/theme
-msgid "https://github.com/marbaque/whitenina"
+msgid "https://github.com/marbaque/white-nina"
 msgstr ""
 
 #. Description of the plugin/theme

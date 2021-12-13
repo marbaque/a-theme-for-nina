@@ -10,7 +10,7 @@
  *
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
-function whitenina_customize_register( $wp_customize ) {
+function white_nina_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 
@@ -19,26 +19,26 @@ function whitenina_customize_register( $wp_customize ) {
 			'blogname',
 			array(
 				'selector'        => '.site-title a',
-				'render_callback' => 'whitenina_customize_partial_blogname',
+				'render_callback' => 'white_nina_customize_partial_blogname',
 			)
 		);
 		$wp_customize->selective_refresh->add_partial(
 			'blogdescription',
 			array(
 				'selector'        => '.site-description',
-				'render_callback' => 'whitenina_customize_partial_blogdescription',
+				'render_callback' => 'white_nina_customize_partial_blogdescription',
 			)
 		);
 	}
 }
-add_action( 'customize_register', 'whitenina_customize_register' );
+add_action( 'customize_register', 'white_nina_customize_register' );
 
 /**
  * Render the site title for the selective refresh partial.
  *
  * @return void
  */
-function whitenina_customize_partial_blogname() {
+function white_nina_customize_partial_blogname() {
 	bloginfo( 'name' );
 }
 
@@ -47,14 +47,14 @@ function whitenina_customize_partial_blogname() {
  *
  * @return void
  */
-function whitenina_customize_partial_blogdescription() {
+function white_nina_customize_partial_blogdescription() {
 	bloginfo( 'description' );
 }
 
 /**
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
-function whitenina_customize_preview_js() {
-	wp_enqueue_script( 'whitenina-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), whitenina_version, true );
+function white_nina_customize_preview_js() {
+	wp_enqueue_script( 'white-nina-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), white_nina_version, true );
 }
-add_action( 'customize_preview_init', 'whitenina_customize_preview_js' );
+add_action( 'customize_preview_init', 'white_nina_customize_preview_js' );

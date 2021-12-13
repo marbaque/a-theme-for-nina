@@ -7,11 +7,11 @@
  * @package White_Nina
  */
 
-if ( ! function_exists( 'whitenina_posted_on' ) ) :
+if ( ! function_exists( 'white_nina_posted_on' ) ) :
 	/**
 	 * Prints HTML with meta information for the current post-date/time.
 	 */
-	function whitenina_posted_on() {
+	function white_nina_posted_on() {
 		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
 			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
@@ -27,7 +27,7 @@ if ( ! function_exists( 'whitenina_posted_on' ) ) :
 
 		$posted_on = sprintf(
 			/* translators: %s: post date. */
-			esc_html_x( '%s', 'post date', 'whitenina' ),
+			esc_html_x( '%s', 'post date', 'white-nina' ),
 			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 		);
 		
@@ -36,14 +36,14 @@ if ( ! function_exists( 'whitenina_posted_on' ) ) :
 	}
 endif;
 
-if ( ! function_exists( 'whitenina_posted_by' ) ) :
+if ( ! function_exists( 'white_nina_posted_by' ) ) :
 	/**
 	 * Prints HTML with meta information for the current author.
 	 */
-	function whitenina_posted_by() {
+	function white_nina_posted_by() {
 		$byline = sprintf(
 			/* translators: %s: post author. */
-			esc_html_x( 'by %s', 'post author', 'whitenina' ),
+			esc_html_x( 'by %s', 'post author', 'white-nina' ),
 			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 		);
 
@@ -52,25 +52,25 @@ if ( ! function_exists( 'whitenina_posted_by' ) ) :
 	}
 endif;
 
-if ( ! function_exists( 'whitenina_entry_footer' ) ) :
+if ( ! function_exists( 'white_nina_entry_footer' ) ) :
 	/**
 	 * Prints HTML with meta information for the categories, tags and comments.
 	 */
-	function whitenina_entry_footer() {
+	function white_nina_entry_footer() {
 		// Hide category and tag text for pages.
 		if ( 'post' === get_post_type() ) {
 			/* translators: used between list items, there is a space after the comma */
-			$categories_list = get_the_category_list( esc_html__( ', ', 'whitenina' ) );
+			$categories_list = get_the_category_list( esc_html__( ', ', 'white-nina' ) );
 			if ( $categories_list ) {
 				/* translators: 1: list of categories. */
-				printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'whitenina' ) . '</span>', $categories_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+				printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'white-nina' ) . '</span>', $categories_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 			}
 
 			/* translators: used between list items, there is a space after the comma */
-			$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'whitenina' ) );
+			$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'white-nina' ) );
 			if ( $tags_list ) {
 				/* translators: 1: list of tags. */
-				printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'whitenina' ) . '</span>', $tags_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+				printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'white-nina' ) . '</span>', $tags_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 			}
 		}
 
@@ -80,7 +80,7 @@ if ( ! function_exists( 'whitenina_entry_footer' ) ) :
 				sprintf(
 					wp_kses(
 						/* translators: %s: post title */
-						__( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'whitenina' ),
+						__( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'white-nina' ),
 						array(
 							'span' => array(
 								'class' => array(),
@@ -97,7 +97,7 @@ if ( ! function_exists( 'whitenina_entry_footer' ) ) :
 			sprintf(
 				wp_kses(
 					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Edit <span class="screen-reader-text">%s</span>', 'whitenina' ),
+					__( 'Edit <span class="screen-reader-text">%s</span>', 'white-nina' ),
 					array(
 						'span' => array(
 							'class' => array(),
@@ -112,14 +112,14 @@ if ( ! function_exists( 'whitenina_entry_footer' ) ) :
 	}
 endif;
 
-if ( ! function_exists( 'whitenina_post_thumbnail' ) ) :
+if ( ! function_exists( 'white_nina_post_thumbnail' ) ) :
 	/**
 	 * Displays an optional post thumbnail.
 	 *
 	 * Wraps the post thumbnail in an anchor element on index views, or a div
 	 * element when on single views.
 	 */
-	function whitenina_post_thumbnail() {
+	function white_nina_post_thumbnail() {
 		if ( post_password_required() || is_attachment() || ! has_post_thumbnail() ) {
 			return;
 		}
@@ -128,7 +128,7 @@ if ( ! function_exists( 'whitenina_post_thumbnail' ) ) :
 			?>
 
 			<div class="post-thumbnail top">
-				<?php the_post_thumbnail( 'whitenina-wide', ['class'=> 'top'] ); ?>
+				<?php the_post_thumbnail( 'white-nina-wide', ['class'=> 'top'] ); ?>
 			</div><!-- .post-thumbnail -->
 
 		<?php else : ?>
@@ -167,31 +167,31 @@ endif;
 /**
  * Customize ellipsis at end of excerpts.
  */
-function whitenina_excerpt_more( $more ) {
+function white_nina_excerpt_more( $more ) {
 	$more = "…";
 	if ( ! is_admin() ) return $more;
 }
-add_filter( 'excerpt_more', 'whitenina_excerpt_more' );
+add_filter( 'excerpt_more', 'white_nina_excerpt_more' );
 
 /**
  * Filter excerpt length to 50 words.
  */
-function whitenina_excerpt_length( $length ) {
+function white_nina_excerpt_length( $length ) {
 	$length = 50;
 	if ( ! is_admin() ) return $length;
 }
-add_filter( 'excerpt_length', 'whitenina_excerpt_length');
+add_filter( 'excerpt_length', 'white_nina_excerpt_length');
 
 
 /**
  * Toggles animation duration in milliseconds.
  *
  */
-function whitenina_toggle_duration() {
+function white_nina_toggle_duration() {
 	/**
 	 * Filters the animation duration/speed used usually for submenu toggles.
 	 */
-	$duration = apply_filters( 'whitenina_toggle_duration', 250 );
+	$duration = apply_filters( 'white_nina_toggle_duration', 250 );
 
 	return $duration;
 }
@@ -201,7 +201,7 @@ function whitenina_toggle_duration() {
  * Adds a Sub Nav Toggle to the Expanded Menu and Mobile Menu.
  *
  */
-function whitenina_add_sub_toggles_to_main_menu( $args, $item, $depth ) {
+function white_nina_add_sub_toggles_to_main_menu( $args, $item, $depth ) {
 
 	// Add sub menu toggles to the Expanded Menu with toggles.
 	if ( isset( $args->show_toggles ) && $args->show_toggles ) {
@@ -214,10 +214,10 @@ function whitenina_add_sub_toggles_to_main_menu( $args, $item, $depth ) {
 		if ( in_array( 'menu-item-has-children', $item->classes, true ) ) {
 
 			$toggle_target_string = '.menu-modal .menu-item-' . $item->ID . ' > .sub-menu';
-			$toggle_duration      = whitenina_toggle_duration();
+			$toggle_duration      = white_nina_toggle_duration();
 
 			// Add the sub menu toggle.
-			$args->after .= '<button class="toggle sub-menu-toggle fill-children-current-color" data-toggle-target="' . $toggle_target_string . '" data-toggle-type="slidetoggle" data-toggle-duration="' . absint( $toggle_duration ) . '" aria-expanded="false"><span class="screen-reader-text">' . __( 'Show sub menu', 'whitenina' ) . '</span>' . '<svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="plus" class="svg-inline--fa fa-plus fa-w-12" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M376 232H216V72c0-4.42-3.58-8-8-8h-32c-4.42 0-8 3.58-8 8v160H8c-4.42 0-8 3.58-8 8v32c0 4.42 3.58 8 8 8h160v160c0 4.42 3.58 8 8 8h32c4.42 0 8-3.58 8-8V280h160c4.42 0 8-3.58 8-8v-32c0-4.42-3.58-8-8-8z"></path></svg>' . '</button>';
+			$args->after .= '<button class="toggle sub-menu-toggle fill-children-current-color" data-toggle-target="' . $toggle_target_string . '" data-toggle-type="slidetoggle" data-toggle-duration="' . absint( $toggle_duration ) . '" aria-expanded="false"><span class="screen-reader-text">' . __( 'Show sub menu', 'white-nina' ) . '</span>' . '<svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="plus" class="svg-inline--fa fa-plus fa-w-12" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M376 232H216V72c0-4.42-3.58-8-8-8h-32c-4.42 0-8 3.58-8 8v160H8c-4.42 0-8 3.58-8 8v32c0 4.42 3.58 8 8 8h160v160c0 4.42 3.58 8 8 8h32c4.42 0 8-3.58 8-8V280h160c4.42 0 8-3.58 8-8v-32c0-4.42-3.58-8-8-8z"></path></svg>' . '</button>';
 
 		}
 
@@ -237,7 +237,7 @@ function whitenina_add_sub_toggles_to_main_menu( $args, $item, $depth ) {
 
 }
 
-add_filter( 'nav_menu_item_args', 'whitenina_add_sub_toggles_to_main_menu', 10, 3 );
+add_filter( 'nav_menu_item_args', 'white_nina_add_sub_toggles_to_main_menu', 10, 3 );
 
 /**
  * Filters classes of wp_list_pages items to match menu items.
@@ -246,7 +246,7 @@ add_filter( 'nav_menu_item_args', 'whitenina_add_sub_toggles_to_main_menu', 10, 
  * styling of sub levels in the fallback. Only applied if the match_menu_classes argument is set.
  *
  */
-function whitenina_filter_wp_list_pages_item_classes( $css_class, $page, $depth, $args, $current_page ) {
+function white_nina_filter_wp_list_pages_item_classes( $css_class, $page, $depth, $args, $current_page ) {
 
 	// Only apply to wp_list_pages() calls with match_menu_classes set to true.
 	$match_menu_classes = isset( $args['match_menu_classes'] );
@@ -269,5 +269,5 @@ function whitenina_filter_wp_list_pages_item_classes( $css_class, $page, $depth,
 
 }
 
-add_filter( 'page_css_class', 'whitenina_filter_wp_list_pages_item_classes', 10, 5 );
+add_filter( 'page_css_class', 'white_nina_filter_wp_list_pages_item_classes', 10, 5 );
 

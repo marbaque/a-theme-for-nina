@@ -19,7 +19,7 @@
 			<div class="menu-top">
 
 				<button class="toggle close-nav-toggle fill-children-current-color" data-toggle-target=".menu-modal" data-toggle-body-class="showing-menu-modal" aria-expanded="false" data-set-focus=".menu-modal">
-					<span class="toggle-text"><?php _e('Close Menu', 'whitenina'); ?></span>
+					<span class="toggle-text"><?php _e('Close Menu', 'white-nina'); ?></span>
 					<svg class="svg-icon" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
 						<polygon fill="" fill-rule="evenodd" points="6.852 7.649 .399 1.195 1.445 .149 7.899 6.602 14.352 .149 15.399 1.195 8.945 7.649 15.399 14.102 14.352 15.149 7.899 8.695 1.445 15.149 .399 14.102"></polygon>
 					</svg>
@@ -32,7 +32,7 @@
 
 				?>
 
-				<nav class="mobile-menu" aria-label="<?php echo esc_attr_x('Mobile', 'menu', 'whitenina'); ?>" role="navigation">
+				<nav class="mobile-menu" aria-label="<?php echo esc_attr_x('Mobile', 'menu', 'white-nina'); ?>" role="navigation">
 
 					<ul class="modal-menu reset-list-style">
 

@@ -14,33 +14,33 @@
 /**
  * Set up the WordPress core custom header feature.
  *
- * @uses whitenina_header_style()
+ * @uses white_nina_header_style()
  */
-function whitenina_custom_header_setup() {
+function white_nina_custom_header_setup() {
 	add_theme_support(
 		'custom-header',
 		apply_filters(
-			'whitenina_custom_header_args',
+			'white_nina_custom_header_args',
 			array(
 				'default-image'      => '',
 				'default-text-color' => '000000',
 				'width'              => 1000,
 				'height'             => 250,
 				'flex-height'        => true,
-				'wp-head-callback'   => 'whitenina_header_style',
+				'wp-head-callback'   => 'white_nina_header_style',
 			)
 		)
 	);
 }
-add_action( 'after_setup_theme', 'whitenina_custom_header_setup' );
+add_action( 'after_setup_theme', 'white_nina_custom_header_setup' );
 
-if ( ! function_exists( 'whitenina_header_style' ) ) :
+if ( ! function_exists( 'white_nina_header_style' ) ) :
 	/**
 	 * Styles the header image and text displayed on the blog.
 	 *
-	 * @see whitenina_custom_header_setup().
+	 * @see white_nina_custom_header_setup().
 	 */
-	function whitenina_header_style() {
+	function white_nina_header_style() {
 		$header_text_color = get_header_textcolor();
 
 		/*

@@ -31,6 +31,9 @@ White Nina includes support for Infinite Scroll in Jetpack.
 
 == Changelog ==
 
+= 1.2.0 - Dec 13 2021 =
+* Change text domain to white-nina
+
 = 1.0.9 - Dec 13 2021 =
 * Added Copyright to readme
 
@@ -52,7 +55,7 @@ White Nina includes support for Infinite Scroll in Jetpack.
 * updated license issues
 
 = 1.0.2 - Dec 7 2021 =
-* Simplified namespace to whitenina
+* Simplified namespace to white-nina
 * fixed prefixes
 * small tweaks based on review from [http://themereview.co/prefix-all-the-things/]
 * updated license issues
@@ -69,12 +72,12 @@ White Nina includes support for Infinite Scroll in Jetpack.
 
 == Copyright ==
 
-White Nina WordPress Theme, Copyright 2021 by Mario Badilla
-White Nina is distributed under the terms of the GNU GPL
+White Nina Wordpress Theme
+Copyright (C) 2021  Mario Badilla
 
-This program is free software: you can redistribute it and/or modify
+This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
+the Free Software Foundation; either version 2 of the License, or
 (at your option) any later version.
 
 This program is distributed in the hope that it will be useful,
@@ -82,8 +85,10 @@ but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
 
-You should have received a copy of the GNU General Public License
-along with this program.  If not, see http://www.gnu.org/licenses/gpl-2.0.html.
+You should have received a copy of the GNU General Public License along
+with this program; if not, write to mbadilla@uned.ac.cr.
+
+== Credits ==
 
 White Nina WordPress Theme is derived from Underscores WordPress Theme, Copyright 2013 Automattic, Inc.
 Underscores WordPress Theme is distributed under the terms of the GNU GPL

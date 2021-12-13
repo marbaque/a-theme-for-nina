@@ -45,16 +45,16 @@
 	</div>
 
 	<div class="site-info">
-		<a href="<?php echo esc_url(__('https://wordpress.org/', 'whitenina')); ?>">
+		<a href="<?php echo esc_url(__('https://wordpress.org/', 'white-nina')); ?>">
 			<?php
 			/* translators: %s: CMS name, i.e. WordPress. */
-			printf(esc_html__('Proudly powered by %s', 'whitenina'), 'WordPress');
+			printf(esc_html__('Proudly powered by %s', 'white-nina'), 'WordPress');
 			?>
 		</a>
 		<span class="sep"> | </span>
 		<?php
 		/* translators: 1: Theme name, 2: Theme author. */
-		printf(esc_html__('Theme: %1$s by %2$s.', 'whitenina'), 'whitenina', 'Mario Badilla');
+		printf(esc_html__('Theme: %1$s by %2$s.', 'white-nina'), 'white-nina', 'Mario Badilla');
 		?>
 	</div><!-- .site-info -->
 </footer><!-- #colophon -->

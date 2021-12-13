@@ -58,7 +58,7 @@ if ( ! class_exists( 'WhiteNina_Walker_Page' ) ) {
 
 			if ( '' === $page->post_title ) {
 				/* translators: %d: ID of a post. */
-				$page->post_title = sprintf( __( '#%d (no title)', 'whitenina' ), $page->ID );
+				$page->post_title = sprintf( __( '#%d (no title)', 'white-nina' ), $page->ID );
 			}
 
 			$args['link_before'] = empty( $args['link_before'] ) ? '' : $args['link_before'];
@@ -92,10 +92,10 @@ if ( ! class_exists( 'WhiteNina_Walker_Page' ) ) {
 				if ( isset( $args['pages_with_children'][ $page->ID ] ) ) {
 
 					$toggle_target_string = '.menu-modal .page-item-' . $page->ID . ' > ul';
-					$toggle_duration      = whitenina_toggle_duration();
+					$toggle_duration      = white_nina_toggle_duration();
 
 					// Add the sub menu toggle.
-					$args['list_item_after'] .= '<button class="toggle sub-menu-toggle fill-children-current-color" data-toggle-target="' . $toggle_target_string . '" data-toggle-type="slidetoggle" data-toggle-duration="' . absint( $toggle_duration ) . '" aria-expanded="false"><span class="screen-reader-text">' . __( 'Show sub menu', 'whitenina' ) . '</span>' . '<svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="plus" class="svg-inline--fa fa-plus fa-w-12" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M376 232H216V72c0-4.42-3.58-8-8-8h-32c-4.42 0-8 3.58-8 8v160H8c-4.42 0-8 3.58-8 8v32c0 4.42 3.58 8 8 8h160v160c0 4.42 3.58 8 8 8h32c4.42 0 8-3.58 8-8V280h160c4.42 0 8-3.58 8-8v-32c0-4.42-3.58-8-8-8z"></path></svg>' . '</button>';
+					$args['list_item_after'] .= '<button class="toggle sub-menu-toggle fill-children-current-color" data-toggle-target="' . $toggle_target_string . '" data-toggle-type="slidetoggle" data-toggle-duration="' . absint( $toggle_duration ) . '" aria-expanded="false"><span class="screen-reader-text">' . __( 'Show sub menu', 'white-nina' ) . '</span>' . '<svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="plus" class="svg-inline--fa fa-plus fa-w-12" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M376 232H216V72c0-4.42-3.58-8-8-8h-32c-4.42 0-8 3.58-8 8v160H8c-4.42 0-8 3.58-8 8v32c0 4.42 3.58 8 8 8h160v160c0 4.42 3.58 8 8 8h32c4.42 0 8-3.58 8-8V280h160c4.42 0 8-3.58 8-8v-32c0-4.42-3.58-8-8-8z"></path></svg>' . '</button>';
 
 				}
 
