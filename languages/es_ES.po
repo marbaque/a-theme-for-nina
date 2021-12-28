@@ -1,0 +1,272 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: White Nina\n"
+"POT-Creation-Date: 2021-12-27 20:37-0600\n"
+"PO-Revision-Date: 2021-12-27 20:40-0600\n"
+"Last-Translator: Mario Badilla <mario.badilla@gmail.com>\n"
+"Language-Team: Mario Badilla <mario.badilla@gmail.com>\n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.0.1\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: style.css\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
+
+#: 404.php:17
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "¡Vaya! No se puede encontrar esa página."
+
+#: 404.php:21
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+"Parece que no se encontró nada en este lugar. Tal vez pruebe uno de los "
+"siguientes enlaces o una búsqueda."
+
+#: 404.php:30
+msgid "Most Used Categories"
+msgstr "Categorías más utilizadas"
+
+#. translators: %1$s: smiley
+#: 404.php:48
+#, php-format
+msgid "Try looking in the monthly archives. %1$s"
+msgstr "Trate de buscar en los archivos mensuales. %1$s"
+
+#. translators: %d: ID of a post.
+#: classes/class-white-nina-walker-page.php:61
+#, php-format
+msgid "#%d (no title)"
+msgstr "#%d (sin título)"
+
+#: classes/class-white-nina-walker-page.php:98 inc/template-tags.php:220
+msgid "Show sub menu"
+msgstr "Mostrar submenú"
+
+#. translators: 1: title.
+#: comments.php:35
+#, php-format
+msgid "One thought on &ldquo;%1$s&rdquo;"
+msgstr "Un pensamiento en &ldquo;%1$s&rdquo;"
+
+#. translators: 1: comment count number, 2: title.
+#: comments.php:41
+#, php-format
+msgctxt "comments title"
+msgid "%1$s thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "%1$s comentario en &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s comentarios sobre &ldquo;%2$s&rdquo;"
+
+#: comments.php:68
+msgid "Comments are closed."
+msgstr "Los comentarios están cerrados."
+
+#: footer.php:48
+msgid "https://wordpress.org/"
+msgstr "https://wordpress.org/"
+
+#. translators: %s: CMS name, i.e. WordPress.
+#: footer.php:51
+#, php-format
+msgid "Proudly powered by %s"
+msgstr "Con la tecnología de %s"
+
+#. translators: 1: Theme name, 2: Theme author.
+#: footer.php:57
+#, php-format
+msgid "Theme: %1$s by %2$s."
+msgstr "Tema: %1$s por %2$s."
+
+#: functions.php:56 header.php:63
+msgid "Menu"
+msgstr "Menú"
+
+#: functions.php:57
+msgid "Footer Menu"
+msgstr "Menú de pie de página"
+
+#: functions.php:58
+msgid "Social Links"
+msgstr "Enlaces sociales"
+
+#: functions.php:143
+msgid "Sidebar"
+msgstr "Barra lateral"
+
+#: functions.php:145 functions.php:156
+msgid "Add widgets here."
+msgstr "Añade widgets aquí."
+
+#: functions.php:154
+msgid "Page Sidebar"
+msgstr "Barra lateral de la página"
+
+#: functions.php:178
+msgctxt "Karla font: on or off"
+msgid "on"
+msgstr "en"
+
+#: functions.php:179
+msgctxt "Roboto+Slab: on or off"
+msgid "on"
+msgstr "en"
+
+#: functions.php:243
+msgid "Expand child menu"
+msgstr "Abrir menú hijo"
+
+#: functions.php:244
+msgid "Collapse child menu"
+msgstr "Contraer menú hijo"
+
+#: header.php:29
+msgid "Skip to content"
+msgstr "Saltar al contenido"
+
+#: header.php:67
+msgctxt "menu"
+msgid "Horizontal"
+msgstr "Horizontal"
+
+#. translators: %s: post date.
+#: inc/template-tags.php:30
+#, php-format
+msgctxt "post date"
+msgid "%s"
+msgstr "%s"
+
+#. translators: %s: post author.
+#: inc/template-tags.php:46
+#, php-format
+msgctxt "post author"
+msgid "by %s"
+msgstr "por %s"
+
+#. translators: used between list items, there is a space after the comma
+#: inc/template-tags.php:63
+msgid ", "
+msgstr ", "
+
+#. translators: 1: list of categories.
+#: inc/template-tags.php:66
+#, php-format
+msgid "Posted in %1$s"
+msgstr "Publicado en %1$s"
+
+#. translators: used between list items, there is a space after the comma
+#: inc/template-tags.php:70
+msgctxt "list item separator"
+msgid ", "
+msgstr ", "
+
+#. translators: 1: list of tags.
+#: inc/template-tags.php:73
+#, php-format
+msgid "Tagged %1$s"
+msgstr "Etiquetado %1$s"
+
+#. translators: %s: post title
+#: inc/template-tags.php:83
+#, php-format
+msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
+msgstr "Deja un comentario<span class=\"screen-reader-text\"> en %s</span>"
+
+#. translators: %s: Name of current post. Only visible to screen readers
+#: inc/template-tags.php:100 template-parts/content-page.php:44
+#, php-format
+msgid "Edit <span class=\"screen-reader-text\">%s</span>"
+msgstr "Editar <span class=\"screen-reader-text\">%s</span>"
+
+#. translators: %s: search query.
+#: search.php:21
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Resultados de búsqueda para: %s"
+
+#: single.php:23
+msgid "Previous:"
+msgstr "Anterior:"
+
+#: single.php:24
+msgid "Next:"
+msgstr "Siguiente:"
+
+#: template-parts/content-none.php:14
+msgid "Nothing Found"
+msgstr "Nada Encontrado"
+
+#. translators: 1: link to WP admin new post page.
+#: template-parts/content-none.php:24
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"¿Lista para publicar su primer post? <a href=\"%1$s\"> Comienza aquí </a>."
+
+#: template-parts/content-none.php:37
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Lo sentimos, pero nada coincide con sus términos de búsqueda. Por favor, "
+"inténtelo de nuevo con algunas palabras clave diferentes."
+
+#: template-parts/content-none.php:44
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+"Parece que no podemos encontrar lo que estamos buscando. Tal vez la búsqueda "
+"puede ayudar."
+
+#: template-parts/content-page.php:30 template-parts/content-search.php:70
+#: template-parts/content-single.php:72 template-parts/content.php:71
+msgid "Pages:"
+msgstr "Páginas:"
+
+#. translators: %s: Name of current post. Only visible to screen readers
+#: template-parts/content-search.php:58 template-parts/content-single.php:60
+#: template-parts/content.php:59
+#, php-format
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr "Continuar leyendo<span class=\"screen-reader-text\"> \"%s\"</span>"
+
+#: template-parts/modal-menu.php:22
+msgid "Close Menu"
+msgstr "Cerrar menú"
+
+#: template-parts/modal-menu.php:35
+msgctxt "menu"
+msgid "Mobile"
+msgstr "Móvil"
+
+#. Theme Name of the plugin/theme
+msgid "White Nina"
+msgstr "Blanca Nina"
+
+#. Theme URI of the plugin/theme
+msgid "https://github.com/marbaque/white-nina"
+msgstr "https://github.com/marbaque/white-nina"
+
+#. Description of the plugin/theme
+msgid "A simple theme for great content"
+msgstr "Un tema simple para un contenido asombroso"
+
+#. Author of the plugin/theme
+msgid "Mario Badilla"
+msgstr "Mario Badilla"
+
+#. Author URI of the plugin/theme
+msgid "http://mariobadilla.com"
+msgstr "http://mariobadilla.com"
