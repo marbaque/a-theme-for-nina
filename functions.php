@@ -10,7 +10,7 @@
 
 if (!defined('white_nina_version')) {
 	// Replace the version number of the theme on each release.
-	define('white_nina_version', '1.2.1');
+	define('white_nina_version', '1.2.2');
 }
 
 if (!function_exists('white_nina_setup')) :

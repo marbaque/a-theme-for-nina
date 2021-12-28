@@ -31,6 +31,9 @@ White Nina includes support for Infinite Scroll in Jetpack.
 
 == Changelog ==
 
+= 1.2.2 - Dec 27 2021
+* Added spanish translation
+
 = 1.2.1 - Dec 13 2021
 * Fixed error in index.js
 
