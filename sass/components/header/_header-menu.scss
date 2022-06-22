@@ -164,6 +164,8 @@ ul.primary-menu {
     word-break: normal;
     word-wrap: normal;
     padding: 1rem 1rem 0.2rem;
+    font-weight: 300;
+    letter-spacing: 0.05em;
   }
 }
 
@@ -409,7 +411,7 @@ button.close-nav-toggle {
     padding: 2rem 2rem;
     text-decoration: none;
     width: 100%;
-	border-bottom: none;
+    border-bottom: none;
   }
 
   > li:last-child {
@@ -446,7 +448,7 @@ button.sub-menu-toggle.active svg {
     display: none;
     margin: 0;
     width: 100%;
-	padding-left: 0;
+    padding-left: 0;
 
     li {
       border-left-width: 0.1rem;

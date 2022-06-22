@@ -5,7 +5,7 @@ Theme URI: https://github.com/marbaque/white-nina
 Author: Mario Badilla
 Author URI: http://mariobadilla.com
 Description: A simple theme for great content
-Version: 1.2.2
+Version: 1.2.3
 Tested up to: 5.8
 Requires PHP: 5.6
 License: GNU General Public License v2 or later
@@ -11061,6 +11061,7 @@ h1.page-title {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  line-height: 1.2;
 }
 @media screen and (min-width: 780px) {
   .site-header .site-branding .site-title {
@@ -11242,6 +11243,8 @@ ul.primary-menu > li.menu-item-has-children > a {
   word-break: normal;
   word-wrap: normal;
   padding: 1rem 1rem 0.2rem;
+  font-weight: 300;
+  letter-spacing: 0.05em;
 }
 
 .primary-menu li.current-menu-item > a:hover,
