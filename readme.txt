@@ -31,6 +31,10 @@ White Nina includes support for Infinite Scroll in Jetpack.
 
 == Changelog ==
 
+= 1.2.3 - Jun 21 2022
+* Added theme support html5 in WP 6.1
+* Updated menu links css for better readability
+
 = 1.2.2 - Dec 27 2021
 * Added spanish translation
 
