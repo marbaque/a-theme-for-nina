@@ -113,9 +113,7 @@ if (!function_exists('white_nina_setup')) :
 		// Add support for experimental link color control.
 		add_theme_support('experimental-link-color');
 
-			
-		add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption', 'style', 'script' ) );
-	}
+		}
 endif;
 add_action('after_setup_theme', 'white_nina_setup');
 
